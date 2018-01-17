@@ -1,0 +1,2 @@
+class Firefighter < ApplicationRecord
+end

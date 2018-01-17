@@ -1,0 +1,36 @@
+Criar modelos
+rails generate model Article title:string text:text
+
+Criar tabela
+rails generate migration CreateProducts name:string part_number:string
+
+Confirmar migração
+rails db:migrate
+
+Deletar banco
+rake db:drop
+
+Resetar banco
+rake db:reset
+
+Criar banco
+rake db:create
+
+Renomear coluna da tabela
+rails g migration RenameColumnTypeFirefighterInTableFirefightersToCommandant
+
+  def change
+  	rename_column :firefighters, :type_firefighter, :commandant
+  end
+
+Excluir coluna de uma tabela
+rails generate migration RemoveTypeCarFromCars type_car:string
+
+Adicionar coluna
+rails generate migration AddRenewPasswordToFirefighters
+  
+  def change
+  	add_column :firefighters, :renew_password, :boolean, default:true
+  end
+
+  

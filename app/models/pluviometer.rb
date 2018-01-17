@@ -1,0 +1,2 @@
+class Pluviometer < ApplicationRecord
+end

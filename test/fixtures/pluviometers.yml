@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_twenty_four: 1.5
+  last_forty_eight: 1.5
+  date: 2018-01-07
+  note: MyString
+
+two:
+  last_twenty_four: 1.5
+  last_forty_eight: 1.5
+  date: 2018-01-07
+  note: MyString
