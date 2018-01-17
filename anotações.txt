@@ -34,7 +34,10 @@ rails generate migration AddRenewPasswordToFirefighters
   end
 
  Ralacionamento belongs_to
+ rails generate migration AddDistrictRefToAdresses
 
- rails generate migration AddUserRefToProducts
+  def change
+  	add_reference :addresses, :district, index: true, foreign_key: true
+  end
 
- 
+
