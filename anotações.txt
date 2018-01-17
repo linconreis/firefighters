@@ -33,4 +33,8 @@ rails generate migration AddRenewPasswordToFirefighters
   	add_column :firefighters, :renew_password, :boolean, default:true
   end
 
-  
+ Ralacionamento belongs_to
+
+ rails generate migration AddUserRefToProducts
+
+ 

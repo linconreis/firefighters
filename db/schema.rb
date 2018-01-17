@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117174112) do
+ActiveRecord::Schema.define(version: 20180117185337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20180117174112) do
     t.string "reference_point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "district_id"
+    t.index ["district_id"], name: "index_addresses_on_district_id"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -103,4 +105,5 @@ ActiveRecord::Schema.define(version: 20180117174112) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "addresses", "districts"
 end
