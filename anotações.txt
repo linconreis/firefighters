@@ -36,7 +36,7 @@ rails generate migration AddRenewPasswordToFirefighters
 Ralacionamento belongs_to
 rails g migration AddCarOfTyprRefToCars car_of_type:references
 
-   def change
+  def change
     add_reference :cars, :type_of_cars, index: true, foreign_key: true
   end
 
@@ -46,3 +46,16 @@ rails g migration RemoveCarFromTypeOfCars car:references
   def change
     remove_reference :type_of_cars, :car, foreign_key: true
   end
+
+União de tabelas
+rails g migration CreateJoinTableCustomerProduct customer product
+  
+  def change
+    create_join_table :cars, :event_logs do |t|
+       t.index [:car_id, :event_log_id]
+       t.index [:event_log_id, :car_id]
+    end
+  end
+
+
+
