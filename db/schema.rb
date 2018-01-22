@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122172954) do
+ActiveRecord::Schema.define(version: 20180122174455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(version: 20180122172954) do
     t.boolean "finished", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "occurrence_type_id"
+    t.index ["occurrence_type_id"], name: "index_event_logs_on_occurrence_type_id"
   end
 
   create_table "firefighters", force: :cascade do |t|
@@ -111,5 +113,6 @@ ActiveRecord::Schema.define(version: 20180122172954) do
 
   add_foreign_key "addresses", "districts"
   add_foreign_key "cars", "type_of_cars", column: "type_of_cars_id"
+  add_foreign_key "event_logs", "occurrence_types"
   add_foreign_key "pluviometers", "firefighters"
 end
