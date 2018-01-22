@@ -33,11 +33,16 @@ rails generate migration AddRenewPasswordToFirefighters
   	add_column :firefighters, :renew_password, :boolean, default:true
   end
 
- Ralacionamento belongs_to
- rails generate migration AddDistrictRefToAdresses
+Ralacionamento belongs_to
+rails g migration AddCarOfTyprRefToCars car_of_type:references
 
-  def change
-  	add_reference :addresses, :district, index: true, foreign_key: true
+   def change
+    add_reference :cars, :type_of_cars, index: true, foreign_key: true
   end
 
+Remover id de relacionamento
+rails g migration RemoveCarFromTypeOfCars car:references
 
+  def change
+    remove_reference :type_of_cars, :car, foreign_key: true
+  end
