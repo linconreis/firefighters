@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117185337) do
+ActiveRecord::Schema.define(version: 20180122165456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 20180117185337) do
     t.string "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "firefighter_id"
+    t.index ["firefighter_id"], name: "index_pluviometers_on_firefighter_id"
   end
 
   create_table "type_of_cars", force: :cascade do |t|
@@ -106,4 +108,5 @@ ActiveRecord::Schema.define(version: 20180117185337) do
   end
 
   add_foreign_key "addresses", "districts"
+  add_foreign_key "pluviometers", "firefighters"
 end
