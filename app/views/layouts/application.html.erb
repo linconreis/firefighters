@@ -21,6 +21,27 @@
 
   <body>
     <%= render './layouts/navbar' %>
+
+    <!--Alerta de informação padrão-->
+    <% if flash[:success].present? %>
+      <p class="alert alert-success" role="alert"><%= flash[:success] %></p>
+    <% end %>
+
+    <!--alerta de informação padrao, todas as páginas-->
+    <% if flash[:info].present? %>
+      <p class="alert alert-info" role="alert"><%= flash[:info] %></p>
+    <% end %>
+
+    <!--alerta de aviso padrao, todas as páginas-->
+    <% if flash[:warning].present? %>
+      <p class="alert alert-warning" role="alert"><%= flash[:warning] %></p>
+    <% end %>
+
+    <!--alerta de perigo padrao, todas as páginas-->
+    <% if flash[:danger].present? %>
+      <p class="alert alert-danger" role="alert"><%= flash[:danger] %></p>
+    <% end %>
+
     <div class="container">
       <%= yield %>
     </div>
