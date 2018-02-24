@@ -2,7 +2,6 @@ class AuthController < ApplicationController
 require 'digest'
 
   def index
-
   end
 
   def sign_in
@@ -24,4 +23,9 @@ require 'digest'
   	end
   end
 
+  def logout
+    destroy_firefighter_session
+    flash[:success] = "Você foi desconectado com sucesso!"
+    redirect_to controller: "welcome"
+  end
 end
