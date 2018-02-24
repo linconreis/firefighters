@@ -2,6 +2,10 @@ class AuthController < ApplicationController
 require 'digest'
 
   def index
+    if firefighter_session?
+      flash[:info] = "Você já está conectado :)"
+      redirect_to controller: "welcome"
+    end
   end
 
   def sign_in
