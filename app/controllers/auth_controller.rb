@@ -16,11 +16,11 @@ require 'digest'
   		redirect_to controller: "welcome"
   		else
   			flash[:warning] = "Senha inválida!"
-  			render :login
+  			redirect_to controller: "auth"
   		end
   	else
   		flash[:warning] = "Usuário não encontrado :("
-  		render :login
+  		redirect_to controller: "auth"
   	end
   end
 
