@@ -34,10 +34,21 @@
         <a class="nav-link" href="#">Registros de ocorrências</a>
       </li>
     </ul>
-    <ul class="navbar-nav text-right">
-      <li class="nav-item ">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
+    <ul class="nav navbar-nav text-right">
+      <% if firefighter_session? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= get_firefighter_session.name %>              
+            </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/logout">Sair</a>
+              </div>
+          </li>
+      <% else %>
+          <li>
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+      <% end %>
     </ul>
   </div>
 </nav>
