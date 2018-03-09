@@ -1,0 +1,18 @@
+<%= form_for @district, url: {controller: "districts", action: "create"} do |f| %>
+	
+	<h1>Novo Bairro</h1>
+
+	<div class="row">
+		<div class="col-sm-2"></div>	
+			<div class="col-sm-8">
+				<div class="form-group">
+					<%= label_tag "Nome do bairro" %>
+					<%= f.text_field :name, class: "form-control form-control-sm" %>
+				</div>
+
+				<%= f.submit "Cadastrar", class: "btn btn-default"  %>
+				  <%= link_to "Voltar", {controller: "districts", action: "index"}, class: "btn btn-link" %>
+			</div>
+		<div class="col-sm-2"></div>
+	</div>
+<% end %>
