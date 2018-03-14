@@ -1,4 +1,17 @@
 <%= form_for @district, url: {controller: "districts", action: "create"} do |f| %>
+
+	<%if @district.errors.any? %>
+		<div class="alert alert-danger" role="alert"> 
+			<strong>Opss! Alguns erros foram encontrados</strong><br>
+			<% @district.errors.messages.values.each do |value| %>
+				<% value.each do |message| %>
+					<%= message %>
+				<% end %>
+			<% end %>
+		</div>
+	<% end %>
+
+
 	<div class="row">
 	  <div class="card-body">
 	    <h1 class="text-left">Novo Bairro</h1>
