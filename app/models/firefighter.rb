@@ -3,9 +3,9 @@ class Firefighter < ApplicationRecord
  before_create :encrypt_password
  before_update :encrypt_password
 	
-	has_many :pluviometers, dependent: :destroy
-	has_and_belongs_to_many :absences, dependent: :destroy
-
+	has_many :pluviometers
+	has_and_belongs_to_many :absences
+	has_and_belongs_to_many :event_logs
 
 private 
 

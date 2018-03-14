@@ -1,6 +1,6 @@
 class Absence < ApplicationRecord
 
-	belongs_to :car
-	has_and_belongs_to_many :firefighters, dependent: :destroy
+	has_and_belongs_to_many :cars
+	has_and_belongs_to_many :firefighters
 
 end
