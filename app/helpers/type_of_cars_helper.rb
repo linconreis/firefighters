@@ -1,0 +1,2 @@
+module TypeOfCarsHelper
+end

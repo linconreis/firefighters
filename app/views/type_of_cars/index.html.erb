@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Lista de Tipos de Viaturas</h1>
+  </div>
+</div>
+<hr><br>
+
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to "Novo Tipo de Viatura", {controller: "type_of_cars", action: "new"}, class: "btb btn-default" %>
+	</div>
+</div><br>
+
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Nome/Tipo</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+				<th>Viaturas</th>
+			</tr>
+		</thead>
+			<% @type_of_cars.each do |type_of_car|  %>
+				<tr>
+					<td><%= type_of_car.name %></td>
+					<td><%= link_to "Editar", edit_type_of_car_path(type_of_car) %></td>
+					<td><%= link_to "Apagar", type_of_car_path(type_of_car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+					<td><%= link_to "Viaturas", type_of_car_cars_path(type_of_car) %></td>
+				</tr>
+			<% end %>
+	</table>
+</div>
