@@ -1,4 +1,17 @@
 <%= form_for @address, url: {controller: "adresses", action: "create"} do |f| %>
+
+	<%if @address.errors.any? %>
+		<div class="alert alert-danger" role="alert">
+			<strong>Opss! Alguns erros foram encontrados</strong><br>
+			<% @address.errors.messages.values.each do |value| %>
+				<% value.each do |message| %>
+					<%= message %>
+				<% end %>
+			<% end %>
+		</div>
+	<% end %>
+
+
 	<div class="row">
 		<div class="card-body">
 	    	<h1 class="text-left">Nova Rua</h1>
