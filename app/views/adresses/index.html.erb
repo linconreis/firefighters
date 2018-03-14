@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Lista de Ruas Cadastradas do <%= @district.name%> </h1>
+  </div>
+</div>
+<hr><br>
+
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to "Nova Rua", {controller: "adresses", action: "new"}, class: "btn btn-default" %>
+		<%= link_to "Voltar", {controller: "districts", action: "index"}, class: "btn btn-default" %>
+	</div>
+</div><br>
+
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Hidrante</th>
+				<th>Ponto de Ref.</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+			</tr>
+		</thead>
+		<% @adresses.each do |address| %>
+			<tr>
+				<td><%= address.name %></td>
+
+				<% if address.hydrant == false %>
+					<td>Não</td>
+				<% else %>
+					<td>Sim</td>
+				<% end %>
+
+				<% if address.reference_point == '' %>
+					<td>Nenhum</td>
+				<% else %>
+					<td><%= address.reference_point %></td>
+				<% end %>
+				</td>
+				<td><%= link_to "Editar", edit_district_adress_path(@district, address) %></td>
+				<td><%= link_to "Apagar", district_adress_path(@district, address), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+			</tr>
+		<% end %> 
+	</table>
+</div>
