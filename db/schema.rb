@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122185111) do
+ActiveRecord::Schema.define(version: 20180314124249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,13 @@ ActiveRecord::Schema.define(version: 20180122185111) do
     t.string "passengers"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "car_id"
-    t.index ["car_id"], name: "index_absences_on_car_id"
+  end
+
+  create_table "absences_cars", id: false, force: :cascade do |t|
+    t.bigint "car_id", null: false
+    t.bigint "absence_id", null: false
+    t.index ["absence_id", "car_id"], name: "index_absences_cars_on_absence_id_and_car_id"
+    t.index ["car_id", "absence_id"], name: "index_absences_cars_on_car_id_and_absence_id"
   end
 
   create_table "absences_firefighters", id: false, force: :cascade do |t|
@@ -90,6 +95,13 @@ ActiveRecord::Schema.define(version: 20180122185111) do
     t.index ["occurrence_type_id"], name: "index_event_logs_on_occurrence_type_id"
   end
 
+  create_table "event_logs_firefighters", id: false, force: :cascade do |t|
+    t.bigint "firefighter_id", null: false
+    t.bigint "event_log_id", null: false
+    t.index ["event_log_id", "firefighter_id"], name: "idx_eventlog_firefighter"
+    t.index ["firefighter_id", "event_log_id"], name: "idx_firefighter_eventlog"
+  end
+
   create_table "firefighters", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
@@ -129,7 +141,6 @@ ActiveRecord::Schema.define(version: 20180122185111) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "absences", "cars"
   add_foreign_key "addresses", "districts"
   add_foreign_key "cars", "type_of_cars", column: "type_of_cars_id"
   add_foreign_key "event_logs", "addresses"
