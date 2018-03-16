@@ -67,3 +67,4 @@ rails g migration CreateJoinTableFirefighterEventLog firefighter event_log
     end
   end
 
+
