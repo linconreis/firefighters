@@ -44,7 +44,7 @@ Remover id de relacionamento
 rails g migration RemoveCarFromTypeOfCars car:references
 
   def change
-    remove_reference :type_of_cars, :car, foreign_key: true
+    remove_reference :type_of_car, :car, foreign_key: true
   end
 
 União de tabelas

@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Lista de Viaturas Cadastradas em <%= @type_of_car.name%> </h1>
+  </div>
+</div>
+<hr><br>
+
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to "Nova Viatura", {controller: "cars", action: "new"}, class: "btn btn-default" %>
+		<%= link_to "Voltar", {controller:"type_of_cars", action: "index"}, class: "btn btn-default" %>
+	</div>
+</div>
+
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Marca</th>
+				<th>Nome</th>
+				<th>Ano</th>
+				<th>Placa</th>
+				<th>Quilometragem</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+			</tr>
+		</thead>
+		<% @cars.each do |car| %>
+			<tr>
+				<td><%= car.brand %></td>
+				<td><%= car.name%></td>
+				<td><%= car.year%></td>
+				<td><%= car.board %></td>
+				<td><%= car.mileage %></td>
+				<td><%= link_to "Editar", edit_type_of_car_car_path(@type_of_car, car) %></td>
+				<td><%= link_to "Excluir", type_of_car_car_path(@type_of_car, car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
