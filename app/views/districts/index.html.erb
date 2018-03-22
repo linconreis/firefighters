@@ -25,7 +25,12 @@
 			<tr>
 				<td><%= district.name %></td>
 				<td><%= link_to "Editar", edit_district_path(district) %></td>
-				<td><%= link_to "Apagar", district, method: :delete, data: {confirm: "Tem certeza?"} %></td>
+
+				<% if district.addresses.present? %>
+					<td><span class="badge badge-info">Em uso</span></td>
+				<% else %>
+					<td><%= link_to "Apagar", district, method: :delete, data: {confirm: "Tem certeza?"} %></td>
+				<% end %>
 				<td><%= link_to "Ruas", district_adresses_path(district) %></td>
 			</tr>
 		<% end %>
