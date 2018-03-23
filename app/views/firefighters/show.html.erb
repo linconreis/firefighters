@@ -1,0 +1,37 @@
+<div class="row">
+	 <div class="card-body">
+	    <h1 class="text-left">Ficha Completa do Bombeiro</h1>
+	 </div>
+</div>
+<hr><br>
+
+<div class="row">
+	<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<table class="table">
+				<tr>
+					<td><strong>Nome:</strong> <%= @firefighter.name %></td>
+					<td><strong>Sobrenome:</strong> <%= @firefighter.last_name %></td>
+				</tr>
+				<tr>
+					<td><strong>Telefone:</strong><%= @firefighter.phone %></td>
+					<td><strong>E-mail:</strong> <%= @firefighter.email %></td>
+				</tr>
+				<tr>
+					<td><strong>Tipo Sanguíneo:</strong> <%= @firefighter.type_blood %></td>
+					<td><strong>Código de Matrícula:</strong> <%= @firefighter.registration %></td>
+				</tr>
+				<tr>
+					<td><strong>Data de Nascimento:</strong> <%= @firefighter.birth_date %></td>
+					<td><strong>Comandande? </strong>
+						<% if @firefighter.commandant == true %>
+							Sim
+							<% else %>
+							Não
+						<% end %>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div class="col-sm-2"></div>
+</div>
