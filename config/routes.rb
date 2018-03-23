@@ -18,5 +18,9 @@ Rails.application.routes.draw do
     resources :cars
   end
 
+  resources :firefighters do
+    resources :pluviometers
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
