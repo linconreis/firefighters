@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+
+ html, body {height:100%;}
+
+ .container {
+    min-height:100%;
+    position:relative;
+}
+
+.card-footer {
+    position: relative;
+    bottom:0;
+    width:100%;
+}

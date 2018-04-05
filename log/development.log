@@ -9954,3 +9954,1972 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 1771ms (Views: 1731.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-31 18:12:14 -0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 2672ms (Views: 2661.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:11:56 -0300
+  [1m[35m (33.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 791ms (Views: 763.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:13:43 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:17:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:19:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:19:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:21:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/..." for 127.0.0.1 at 2018-04-05 16:21:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:21:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:23:13 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:23:35 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:24:20 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:28:46 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/..." for 127.0.0.1 at 2018-04-05 16:28:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:29:10 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:29:38 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:30:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:31:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:32:45 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:33:29 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:33:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:33:50 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (88.7ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (37.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (360.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 474ms (Views: 238.6ms | ActiveRecord: 176.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:34:00 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 68.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:36:05 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.9ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 64.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:36:37 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 70.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:37:08 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.2ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 67.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:40:16 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (27.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:40:21 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.2ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 16:40:22 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (30.8ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (75.4ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (231.8ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 318ms (Views: 153.9ms | ActiveRecord: 127.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:40:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:40:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:40:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:40:27 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (22.2ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (16.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (124.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 230ms (Views: 129.7ms | ActiveRecord: 59.4ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 16:40:28 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.5ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 64.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 16:40:33 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (0.9ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 75.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:40:34 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.9ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 72.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:40:35 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.6ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:40:36 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.0ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:40:38 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (8.1ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (1.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 67.3ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:40:38 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.9ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 69.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-05 16:40:40 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:40:42 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 16:40:43 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.0ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.7ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 68.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 16:40:44 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 16:41:01 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.3ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 16:41:26 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:41:36 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:41:48 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 16:41:57 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 16:41:58 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.0ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (2.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 68.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 16:42:00 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 67.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:42:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:43:54 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/..." for 127.0.0.1 at 2018-04-05 16:43:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:44:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/..." for 127.0.0.1 at 2018-04-05 16:44:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:44:58 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:45:04 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:45:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:45:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:46:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:46:27 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:46:30 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:46:38 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:46:52 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:49:38 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:50:29 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:50:30 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:50:31 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:50:32 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:54:33 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:54:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:55:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:55:22 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:56:08 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:56:36 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:56:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:56:50 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:56:51 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:57:00 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:57:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:57:23 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:57:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:58:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:58:23 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 16:58:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:02:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:03:59 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:04:48 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:06:26 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:06:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:07:34 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:08:18 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:08:30 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:10:33 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:10:35 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:10:35 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_navbar.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 82ms (Views: 75.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:10:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:11:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:11:10 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (2.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 75.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:11:13 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.0ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 66.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:11:15 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.7ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:11:15 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.1ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 66.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:11:17 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:11:25 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:12:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:12:10 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.1ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (3.5ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:12:11 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:12:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:13:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:14:03 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:14:05 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.1ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.3ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.3ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 68.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:14:08 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:14:11 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.0ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 67.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:14:13 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 67.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:14:13 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:14:23 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:14:25 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 67.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:14:29 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.1ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.7ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 78.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:14:32 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:14:51 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.5ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:15:00 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.8ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/firefighters/new" for 127.0.0.1 at 2018-04-05 17:15:05 -0300
+Processing by FirefightersController#new as HTML
+  Rendering firefighters/new.html.erb within layouts/application
+  Rendered firefighters/new.html.erb within layouts/application (258.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 336ms (Views: 322.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:15:07 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (2.9ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/firefighters/2" for 127.0.0.1 at 2018-04-05 17:15:09 -0300
+Processing by FirefightersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering firefighters/show.html.erb within layouts/application
+  Rendered firefighters/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 52.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:15:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:15:18 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.2ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_navbar.html.erb (19.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 101ms (Views: 94.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:15:20 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (2.6ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 66.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:15:21 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (3.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:15:21 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.9ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 67.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:15:22 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.4ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:15:23 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.7ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 73.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:15:23 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.3ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-05 17:15:24 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:15:27 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 72.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:15:39 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 90ms (Views: 82.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:15:40 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:15:41 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:15:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:20:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:20:55 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 77.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:20:56 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (0.7ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (4.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 72.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:20:59 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:23:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:23:18 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:23:29 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:23:33 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:25:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:25:23 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:25:33 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:25:36 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 62.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:25:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:25:48 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 70.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-04-05 17:25:50 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:25:53 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 67.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:25:55 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.1ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (3.3ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 80.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:25:59 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.2ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (1.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.7ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 78ms (Views: 69.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:26:00 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.0ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.7ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:26:06 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:26:08 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (1.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 84.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:26:10 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (0.8ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/pluviometers/new" for 127.0.0.1 at 2018-04-05 17:26:10 -0300
+Processing by PluviometersController#new as HTML
+  Rendering pluviometers/new.html.erb within layouts/application
+  Rendered pluviometers/new.html.erb within layouts/application (24.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:26:12 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.6ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 73.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:26:14 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (3.5ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (28.8ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 80.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:26:16 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/firefighters/2" for 127.0.0.1 at 2018-04-05 17:26:18 -0300
+Processing by FirefightersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering firefighters/show.html.erb within layouts/application
+  Rendered firefighters/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-05 17:26:22 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:26:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-05 17:26:32 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 72.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-05 17:26:32 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.1ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-05 17:26:33 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 69.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:26:35 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.8ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 68.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/type_of_cars/2/cars" for 127.0.0.1 at 2018-04-05 17:26:36 -0300
+Processing by CarsController#index as HTML
+  Parameters: {"type_of_car_id"=>"2"}
+  [1m[36mTypeOfCar Load (1.5ms)[0m  [1m[34mSELECT  "type_of_cars".* FROM "type_of_cars" WHERE "type_of_cars"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (1.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = 2[0m
+  Rendered cars/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 56.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-05 17:26:38 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.7ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  Rendered type_of_cars/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 78ms (Views: 72.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:26:39 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-05 17:26:41 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2018-04-05 17:26:42 -0300
+Processing by AuthController#sign_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qQYR8xw0Xde7N0Rf4Nqim3Pf/kgYiTpC5w1/tBjdZ5/26o9C9UxDXB1AU7e+ngwjeaEoQDuRx1xdQe4Cx1i7cA==", "firefighter"=>{"registration"=>"101010", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "101010"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:26:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[36mFirefighter Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "101010"], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (1.4ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "101010"], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (21.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 118.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-04-05 17:26:45 -0300
+Processing by AuthController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:26:45 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-05 17:27:52 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
