@@ -11923,3 +11923,911 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-08 18:41:52 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "firefighters_development" does not exist
+):
+  
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:699:in `rescue in connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (93.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (93.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3409675793835498390)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDistricts (20180107215629)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.7ms)[0m  [1m[35mCREATE TABLE "districts" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107215629"]]
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20180107220142)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "name" character varying, "hydrant" boolean DEFAULT 'f', "reference_point" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107220142"]]
+  [1m[35m (21.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePluviometers (20180107220602)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (72.4ms)[0m  [1m[35mCREATE TABLE "pluviometers" ("id" bigserial primary key, "last_twenty_four" float, "last_forty_eight" float, "date" date, "note" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107220602"]]
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOccurrenceTypes (20180107220846)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (82.2ms)[0m  [1m[35mCREATE TABLE "occurrence_types" ("id" bigserial primary key, "code" integer, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107220846"]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCars (20180107221130)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (65.8ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "name" character varying, "brand" character varying, "board" character varying, "type_car" character varying, "mileage" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107221130"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFirefighters (20180107223628)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (74.1ms)[0m  [1m[35mCREATE TABLE "firefighters" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "phone" bigint, "type_firefighter" boolean, "type_blood" character varying, "password" character varying, "email" character varying, "registration" character varying, "birth_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180107223628"]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAbsences (20180109234013)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (76.6ms)[0m  [1m[35mCREATE TABLE "absences" ("id" bigserial primary key, "justification" character varying, "exit_time" time, "return_time" time, "date_out" date, "return_date" date, "responsible_driver" character varying, "passengers" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180109234013"]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameColumnTypeFirefighterInTableFirefightersToCommandant (20180117003616)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "firefighters" RENAME COLUMN "type_firefighter" TO "commandant"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117003616"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveTypeCarFromCars (20180117004453)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "cars" DROP "type_car"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117004453"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTypeOfCars (20180117010240)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (101.1ms)[0m  [1m[35mCREATE TABLE "type_of_cars" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117010240"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRenewPasswordToFirefighters (20180117011823)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.9ms)[0m  [1m[35mALTER TABLE "firefighters" ADD "renew_password" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117011823"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEventLogs (20180117174112)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (77.8ms)[0m  [1m[35mCREATE TABLE "event_logs" ("id" bigserial primary key, "phone" bigint, "date" date, "exit_time" time, "return_time" time, "requester" character varying, "descriptive_memorial" character varying, "measures_taken" character varying, "comments" character varying, "on_duty" character varying, "climate_conditions" character varying, "finished" boolean DEFAULT 'f', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117174112"]]
+  [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDistricRefToAddresses (20180117185337)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "addresses" ADD "district_id" bigint[0m
+  [1m[35m (35.2ms)[0m  [1m[35mCREATE  INDEX  "index_addresses_on_district_id" ON "addresses"  ("district_id")[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "addresses" ADD CONSTRAINT "fk_rails_1b98d66e19"
+FOREIGN KEY ("district_id")
+  REFERENCES "districts" ("id")
+[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180117185337"]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddFirefightersRefToPluviometers (20180122165456)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "pluviometers" ADD "firefighter_id" bigint[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCREATE  INDEX  "index_pluviometers_on_firefighter_id" ON "pluviometers"  ("firefighter_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "pluviometers" ADD CONSTRAINT "fk_rails_4ef555f51a"
+FOREIGN KEY ("firefighter_id")
+  REFERENCES "firefighters" ("id")
+[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122165456"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCarRefToTypeOfCars (20180122170506)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "type_of_cars" ADD "car_id" bigint[0m
+  [1m[35m (36.7ms)[0m  [1m[35mCREATE  INDEX  "index_type_of_cars_on_car_id" ON "type_of_cars"  ("car_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "type_of_cars" ADD CONSTRAINT "fk_rails_6c72288fd2"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122170506"]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveTypeOfCarFromCars (20180122171902)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "type_of_cars" DROP CONSTRAINT "fk_rails_6c72288fd2"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "type_of_cars" DROP "car_id"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122171902"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCarOfTyprRefToCars (20180122172954)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "cars" ADD "type_of_cars_id" bigint[0m
+  [1m[35m (36.3ms)[0m  [1m[35mCREATE  INDEX  "index_cars_on_type_of_cars_id" ON "cars"  ("type_of_cars_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "cars" ADD CONSTRAINT "fk_rails_8faa286d2a"
+FOREIGN KEY ("type_of_cars_id")
+  REFERENCES "type_of_cars" ("id")
+[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122172954"]]
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddOccurrenceTypeRefToEventLogs (20180122174455)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "event_logs" ADD "occurrence_type_id" bigint[0m
+  [1m[35m (38.3ms)[0m  [1m[35mCREATE  INDEX  "index_event_logs_on_occurrence_type_id" ON "event_logs"  ("occurrence_type_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "event_logs" ADD CONSTRAINT "fk_rails_5110888c1f"
+FOREIGN KEY ("occurrence_type_id")
+  REFERENCES "occurrence_types" ("id")
+[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122174455"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAddressRefToEventLogs (20180122180141)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "event_logs" ADD "address_id" bigint[0m
+  [1m[35m (37.5ms)[0m  [1m[35mCREATE  INDEX  "index_event_logs_on_address_id" ON "event_logs"  ("address_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "event_logs" ADD CONSTRAINT "fk_rails_4db79d1259"
+FOREIGN KEY ("address_id")
+  REFERENCES "addresses" ("id")
+[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122180141"]]
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCarRefToAbsences (20180122181205)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "absences" ADD "car_id" bigint[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE  INDEX  "index_absences_on_car_id" ON "absences"  ("car_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "absences" ADD CONSTRAINT "fk_rails_7615a29c5d"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122181205"]]
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableCarEventLog (20180122184104)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "cars_event_logs" ("car_id" bigint NOT NULL, "event_log_id" bigint NOT NULL)[0m
+  [1m[35m (37.2ms)[0m  [1m[35mCREATE  INDEX  "index_cars_event_logs_on_car_id_and_event_log_id" ON "cars_event_logs"  ("car_id", "event_log_id")[0m
+  [1m[35m (38.8ms)[0m  [1m[35mCREATE  INDEX  "index_cars_event_logs_on_event_log_id_and_car_id" ON "cars_event_logs"  ("event_log_id", "car_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122184104"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableFirefighterAbsence (20180122185111)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "absences_firefighters" ("firefighter_id" bigint NOT NULL, "absence_id" bigint NOT NULL)[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE  INDEX  "index_absences_firefighters_on_firefighter_id_and_absence_id" ON "absences_firefighters"  ("firefighter_id", "absence_id")[0m
+  [1m[35m (46.0ms)[0m  [1m[35mCREATE  INDEX  "index_absences_firefighters_on_absence_id_and_firefighter_id" ON "absences_firefighters"  ("absence_id", "firefighter_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180122185111"]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveCarFromAbsences (20180314123716)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "absences" DROP CONSTRAINT "fk_rails_7615a29c5d"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "absences" DROP "car_id"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180314123716"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableCarAbsence (20180314124003)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "absences_cars" ("car_id" bigint NOT NULL, "absence_id" bigint NOT NULL)[0m
+  [1m[35m (45.2ms)[0m  [1m[35mCREATE  INDEX  "index_absences_cars_on_car_id_and_absence_id" ON "absences_cars"  ("car_id", "absence_id")[0m
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE  INDEX  "index_absences_cars_on_absence_id_and_car_id" ON "absences_cars"  ("absence_id", "car_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180314124003"]]
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableFirefighterEventLog (20180314124249)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "event_logs_firefighters" ("firefighter_id" bigint NOT NULL, "event_log_id" bigint NOT NULL)[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCREATE  INDEX  "idx_firefighter_eventlog" ON "event_logs_firefighters"  ("firefighter_id", "event_log_id")[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCREATE  INDEX  "idx_eventlog_firefighter" ON "event_logs_firefighters"  ("event_log_id", "firefighter_id")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180314124249"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveTypeOfCarFromTypeOfCar (20180316194202)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "cars" ADD "type_of_car_id" bigint[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE  INDEX  "index_cars_on_type_of_car_id" ON "cars"  ("type_of_car_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "cars" ADD CONSTRAINT "fk_rails_6a108474b6"
+FOREIGN KEY ("type_of_car_id")
+  REFERENCES "type_of_cars" ("id")
+[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180316194202"]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveTypeOfCarsFromCar (20180316194639)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "cars" DROP CONSTRAINT "fk_rails_8faa286d2a"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "cars" DROP "type_of_cars_id"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180316194639"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCollunYearToCars (20180316200554)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "cars" ADD "year" bigint[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180316200554"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-08 21:42:39.052360"], ["updated_at", "2018-04-08 21:42:39.052360"]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3409675793835498390)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFirefighter Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirefighter Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "101010"], ["LIMIT", 1]]
+  [1m[36mFirefighter Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."email" = $1 LIMIT $2[0m  [["email", "lincon9891@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "firefighters" ("name", "last_name", "phone", "commandant", "type_blood", "password", "email", "registration", "birth_date", "created_at", "updated_at", "renew_password") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "lincon"], ["last_name", "reis"], ["phone", 54996583860], ["commandant", "t"], ["type_blood", "o+"], ["password", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"], ["email", "lincon9891@gmail.com"], ["registration", "101010"], ["birth_date", "1989-10-13"], ["created_at", "2018-04-08 21:42:44.229949"], ["updated_at", "2018-04-08 21:42:44.229949"], ["renew_password", "f"]]
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFirefighter Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "151515"], ["LIMIT", 1]]
+  [1m[36mFirefighter Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."email" = $1 LIMIT $2[0m  [["email", "comandante@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "firefighters" ("name", "last_name", "phone", "commandant", "type_blood", "password", "email", "registration", "birth_date", "created_at", "updated_at", "renew_password") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "comandante"], ["last_name", "major"], ["phone", 5499999999], ["commandant", "t"], ["type_blood", "o+"], ["password", "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"], ["email", "comandante@gmail.com"], ["registration", "151515"], ["birth_date", "1989-01-10"], ["created_at", "2018-04-08 21:42:44.252818"], ["updated_at", "2018-04-08 21:42:44.252818"], ["renew_password", "f"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-04-08 18:42:50 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1974ms (Views: 1966.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-08 18:43:02 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.4ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  Rendered pluviometers/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 65.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-08 18:43:05 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (50.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-04-08 18:43:06 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-08 18:43:07 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (1.0ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  Rendered type_of_cars/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 47.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-08 18:43:07 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.2ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (50.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 86.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-08 18:43:08 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  Rendered districts/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-08 18:43:11 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  Rendered districts/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-08 18:44:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-08 18:44:06 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  Rendered districts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-04-08 18:44:08 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 44.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-08 18:44:39 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:32:25 -0300
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 559ms (Views: 550.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:32:30 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (56.1ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  Rendered districts/index.html.erb within layouts/application (66.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 190ms (Views: 77.9ms | ActiveRecord: 58.3ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-20 14:32:32 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (14.4ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  Rendered pluviometers/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 57.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-20 14:32:33 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (62.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (137.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 195ms (Views: 92.4ms | ActiveRecord: 85.9ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-20 14:32:34 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (2.9ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  Rendered type_of_cars/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 47.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-20 14:32:35 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.7ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  Rendered type_of_cars/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-20 14:32:35 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.6ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  Rendered type_of_cars/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-04-20 14:32:36 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (0.8ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  Rendered type_of_cars/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:32:36 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  Rendered districts/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-04-20 14:32:37 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (43.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 88.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/districts" for 127.0.0.1 at 2018-04-20 14:32:44 -0300
+Processing by DistrictsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vmn/uzdBsMOeet/NbaXe351AhqcKBhnpvvlpTMYIEbOm5QcESwdz/zoXZIy5brw5Z1xIuIXhDFEw7xuqoHbmxQ==", "district"=>{"name"=>"São "}, "commit"=>"Cadastrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "districts" WHERE "districts"."name" = $1 LIMIT $2[0m  [["name", "São "], ["LIMIT", 1]]
+  [1m[35mSQL (25.1ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "São "], ["created_at", "2018-04-20 17:32:44.201079"], ["updated_at", "2018-04-20 17:32:44.201079"]]
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts
+Completed 302 Found in 106ms (ActiveRecord: 54.8ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:32:44 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (7.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (103.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 149ms (Views: 134.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/districts/1/edit" for 127.0.0.1 at 2018-04-20 14:32:46 -0300
+Processing by DistrictsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering districts/edit.html.erb within layouts/application
+  Rendered districts/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 43.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/districts/1" for 127.0.0.1 at 2018-04-20 14:32:51 -0300
+Processing by DistrictsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8GNpcraXJHgBTo1N+N7FPVU6Tdgk1zchXE+k0ELNDBHUdkSYwS7/hzRt4WgrkRE9sQlsF4FvDXHGEhbhKyjng==", "district"=>{"name"=>"São Miguel"}, "commit"=>"Atualizar", "id"=>"1"}
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "districts" WHERE "districts"."name" = $1 AND ("districts"."id" != $2) LIMIT $3[0m  [["name", "São Miguel"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (44.3ms)[0m  [1m[33mUPDATE "districts" SET "name" = $1, "updated_at" = $2 WHERE "districts"."id" = $3[0m  [["name", "São Miguel"], ["updated_at", "2018-04-20 17:32:51.632598"], ["id", 1]]
+  [1m[35m (61.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts
+Completed 302 Found in 118ms (ActiveRecord: 107.5ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:32:51 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/districts/1/adresses" for 127.0.0.1 at 2018-04-20 14:32:53 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"1"}
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 1[0m
+  Rendered adresses/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 39.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/districts/1/adresses/new" for 127.0.0.1 at 2018-04-20 14:32:54 -0300
+Processing by AdressesController#new as HTML
+  Parameters: {"district_id"=>"1"}
+  Rendering adresses/new.html.erb within layouts/application
+  Rendered adresses/new.html.erb within layouts/application (174.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 236ms (Views: 211.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/districts/1/adresses" for 127.0.0.1 at 2018-04-20 14:33:04 -0300
+Processing by AdressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zWbUrHS+hZ8J+5BhgFdiUZJSYvY8NrED4ZjH6W6Zry7DzR2NrD2U7coUjlh9VvuEH4KxSn52DAuu1IQ0P1ev/w==", "address"=>{"name"=>"João Basei Filho", "hydrant"=>"false", "reference_point"=>""}, "commit"=>"Cadastrar", "district_id"=>"1"}
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAddress Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "addresses" WHERE "addresses"."name" = $1 LIMIT $2[0m  [["name", "João Basei Filho"], ["LIMIT", 1]]
+  [1m[35mSQL (7.3ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "reference_point", "created_at", "updated_at", "district_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "João Basei Filho"], ["reference_point", ""], ["created_at", "2018-04-20 17:33:04.333567"], ["updated_at", "2018-04-20 17:33:04.333567"], ["district_id", 1]]
+  [1m[35m (60.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts/1/adresses
+Completed 302 Found in 127ms (ActiveRecord: 70.1ms)
+
+
+Started GET "/districts/1/adresses" for 127.0.0.1 at 2018-04-20 14:33:04 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"1"}
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 1[0m
+  Rendered adresses/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/districts/1/adresses/new" for 127.0.0.1 at 2018-04-20 14:33:07 -0300
+Processing by AdressesController#new as HTML
+  Parameters: {"district_id"=>"1"}
+  Rendering adresses/new.html.erb within layouts/application
+  Rendered adresses/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts/1/adresses" for 127.0.0.1 at 2018-04-20 14:33:51 -0300
+Processing by AdressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/0/yrh+zjR5p8zC2EFLqhZzzt7Y9XvEgw/cblbtMrcLx5DuPxzCcbKocLo/tU3NQESNkCn8eTCiMu1hI6oKtEw==", "address"=>{"name"=>"Gilberto de Zorzi", "hydrant"=>"true", "reference_point"=>"Rua do Portal"}, "commit"=>"Cadastrar", "district_id"=>"1"}
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAddress Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "addresses" WHERE "addresses"."name" = $1 LIMIT $2[0m  [["name", "Gilberto de Zorzi"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "hydrant", "reference_point", "created_at", "updated_at", "district_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gilberto de Zorzi"], ["hydrant", "t"], ["reference_point", "Rua do Portal"], ["created_at", "2018-04-20 17:33:51.109859"], ["updated_at", "2018-04-20 17:33:51.109859"], ["district_id", 1]]
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts/1/adresses
+Completed 302 Found in 50ms (ActiveRecord: 41.3ms)
+
+
+Started GET "/districts/1/adresses" for 127.0.0.1 at 2018-04-20 14:33:51 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"1"}
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 1[0m
+  Rendered adresses/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:33:55 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-04-20 14:33:57 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts" for 127.0.0.1 at 2018-04-20 14:34:00 -0300
+Processing by DistrictsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtf+vskT+405IPqjVSxDMx8d+SBTnAwzeq5WuI7YayNuWwYBtVU4sZ1NQeKB5yHV5QE3P9x7GYv0uCRe6KacVQ==", "district"=>{"name"=>"Centro"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "districts" WHERE "districts"."name" = $1 LIMIT $2[0m  [["name", "Centro"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Centro"], ["created_at", "2018-04-20 17:34:00.114739"], ["updated_at", "2018-04-20 17:34:00.114739"]]
+  [1m[35m (52.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts
+Completed 302 Found in 61ms (ActiveRecord: 53.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:34:00 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/districts/2/adresses" for 127.0.0.1 at 2018-04-20 14:34:02 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"2"}
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 2[0m
+  Rendered adresses/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/districts/2/adresses/new" for 127.0.0.1 at 2018-04-20 14:34:03 -0300
+Processing by AdressesController#new as HTML
+  Parameters: {"district_id"=>"2"}
+  Rendering adresses/new.html.erb within layouts/application
+  Rendered adresses/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts/2/adresses" for 127.0.0.1 at 2018-04-20 14:34:16 -0300
+Processing by AdressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TDS8ioZ/WtQG59kmzy/0pMP7Se3r8NpC/0Opxt34KZ0jqsaUlkv40SdmI1U51U6d9lchIr8iyHBefBBs5X7RIA==", "address"=>{"name"=>"A. Júlio de Castilhos", "hydrant"=>"false", "reference_point"=>""}, "commit"=>"Cadastrar", "district_id"=>"2"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAddress Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "addresses" WHERE "addresses"."name" = $1 LIMIT $2[0m  [["name", "A. Júlio de Castilhos"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "reference_point", "created_at", "updated_at", "district_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "A. Júlio de Castilhos"], ["reference_point", ""], ["created_at", "2018-04-20 17:34:16.796745"], ["updated_at", "2018-04-20 17:34:16.796745"], ["district_id", 2]]
+  [1m[35m (313.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts/2/adresses
+Completed 302 Found in 325ms (ActiveRecord: 316.1ms)
+
+
+Started GET "/districts/2/adresses" for 127.0.0.1 at 2018-04-20 14:34:17 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"2"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 2[0m
+  Rendered adresses/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/districts/2/adresses/new" for 127.0.0.1 at 2018-04-20 14:34:19 -0300
+Processing by AdressesController#new as HTML
+  Parameters: {"district_id"=>"2"}
+  Rendering adresses/new.html.erb within layouts/application
+  Rendered adresses/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts/2/adresses" for 127.0.0.1 at 2018-04-20 14:34:48 -0300
+Processing by AdressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2asL7zNoEZWL5Ck+0RYqzfqVxg4Wl3O7XJKHyDridX+2NXHxI1yzkKpl000n7JD0zzmuwUJFYYn9rT5iAmSNwg==", "address"=>{"name"=>"Bento Gonçalves", "hydrant"=>"true", "reference_point"=>"Morro dos eucaliptos"}, "commit"=>"Cadastrar", "district_id"=>"2"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAddress Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "addresses" WHERE "addresses"."name" = $1 LIMIT $2[0m  [["name", "Bento Gonçalves"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "hydrant", "reference_point", "created_at", "updated_at", "district_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bento Gonçalves"], ["hydrant", "t"], ["reference_point", "Morro dos eucaliptos"], ["created_at", "2018-04-20 17:34:48.782227"], ["updated_at", "2018-04-20 17:34:48.782227"], ["district_id", 2]]
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts/2/adresses
+Completed 302 Found in 49ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/districts/2/adresses" for 127.0.0.1 at 2018-04-20 14:34:48 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"2"}
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 2[0m
+  Rendered adresses/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:34:51 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-04-20 14:34:53 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts" for 127.0.0.1 at 2018-04-20 14:35:00 -0300
+Processing by DistrictsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l1WWvGIP7rFVG6P36Z7A9DksYFWcA5rnSL5/7LiYSWKP2W4DHkktjfF2GLY9VaISwzCuShPkj1/GqA0K3ua+FA==", "district"=>{"name"=>"Alpes"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "districts" WHERE "districts"."name" = $1 LIMIT $2[0m  [["name", "Alpes"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Alpes"], ["created_at", "2018-04-20 17:35:00.242294"], ["updated_at", "2018-04-20 17:35:00.242294"]]
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts
+Completed 302 Found in 46ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:35:00 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-20 14:35:02 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (0.8ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  Rendered pluviometers/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-20 14:35:06 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/firefighters/new" for 127.0.0.1 at 2018-04-20 14:35:09 -0300
+Processing by FirefightersController#new as HTML
+  Rendering firefighters/new.html.erb within layouts/application
+  Rendered firefighters/new.html.erb within layouts/application (36.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-20 14:35:11 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/firefighters/new" for 127.0.0.1 at 2018-04-20 14:37:52 -0300
+Processing by FirefightersController#new as HTML
+  Rendering firefighters/new.html.erb within layouts/application
+  Rendered firefighters/new.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3409675793835498390)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCommandantToBooleanFalseInFireFirefighters (20180420174323)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3409675793835498390)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3409675793835498390)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCommandantToBooleanFalseInFireFirefighters (20180420174323)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.0ms)[0m  [1m[35mALTER TABLE "firefighters" ALTER COLUMN "commandant" TYPE bollean[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(3409675793835498390)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3409675793835498390)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeCommandantToBooleanFalseInFireFirefighters (20180420174323)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.7ms)[0m  [1m[35mALTER TABLE "firefighters" ALTER COLUMN "commandant" TYPE boolean[0m
+  [1m[35m (23.6ms)[0m  [1m[35mALTER TABLE "firefighters" ALTER COLUMN "commandant" SET DEFAULT 'f'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180420174323"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (33.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3409675793835498390)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 14:48:37 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 289ms (Views: 282.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-04-20 14:48:38 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.7ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (125.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 207ms (Views: 159.3ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-04-20 14:48:39 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (1.5ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  Rendered pluviometers/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 88.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-04-20 14:48:41 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (1.0ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 74.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/firefighters/new" for 127.0.0.1 at 2018-04-20 14:48:42 -0300
+Processing by FirefightersController#new as HTML
+  Rendering firefighters/new.html.erb within layouts/application
+  Rendered firefighters/new.html.erb within layouts/application (146.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 183ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
