@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :firefighters 
 
   resources :pluviometers
+
+  resources :absences
   
 
   # ROTAS ANINHADAS
