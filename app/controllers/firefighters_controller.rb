@@ -2,7 +2,7 @@ class FirefightersController < ApplicationController
 	require "digest"
 
 	def index
-		 @firefighters = Firefighter.order(:name).all
+		@firefighters = Firefighter.order(:name).all
 	end
 
 	def new
