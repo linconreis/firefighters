@@ -1,0 +1,88 @@
+<%= form_for @absence, url: {controller: "absences", action: "create" } do |f| %>
+
+	<% if @absence.errors.any? %>
+		<div class="alert alert-danger" role= "alert">
+			<strong>Opss! Alguns erros foram encontrados</strong><br>
+			<% @absence.errors.messages.valueseach do |value| %>
+				<% value.each do |message| %><br>
+					<%= message %>
+				<% end %>
+			<% end %>
+		</div>
+	<% end %>
+
+	<div class="row">
+	  <div class="card-body">
+	    <h1 class="text-left">Nova Ausência</h1>
+	  </div>
+	</div>
+	<hr><br>
+
+	<div class="row">
+		<div class="col-sm-2"></div>
+			<div class="col-sm-2">
+				<div class="form-group">
+					<%= label_tag "Data de saída" %>
+					<%= f.date_field :date_out, class: "form-control form-control-sm" %>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="form-group">
+					<%= label_tag "Hora da saída" %>
+					<%= f.time_field :exit_time, class: "form-control form-control-sm" %>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="form-group">
+					<%= label_tag "Data de retorno" %>
+					<%= f.date_field :return_date, class: "form-control form-control-sm" %>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="form-group">
+					<%= label_tag "Hora do retorno" %>
+					<%= f.time_field :return_time, class: "form-control form-control-sm" %>
+				</div>
+			</div>
+		<div class="col-sm-2"></div>		
+	</div>
+	<div class="row">
+		<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<div class="form-group">
+					<%= label_tag "Justificativa" %>
+					<%= f.text_area :justification, class: "form-control form-control-sm" %>
+				</div>
+			</div>
+		<div class="col-sm-2"></div>
+	</div>
+
+	<div class="row">
+	  <div class="card-body">
+	    <h4 class="text-center">Selecione os bombeiros e viaturas envolvidos na ausência</h4>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-2"></div>
+			<div class="col-sm-4">
+        <h4>Bombeiros</h4>
+        <div class="form-group">
+          <%= collection_select(:firefighter, :id, @firefighters, :id, :name, {}, { :multiple => true, :class => "form-control form-control-sm" }) %>
+        </div>
+
+				<div class="form-group">
+					<%= f.submit "Cadastrar", class: "btn btn-default" %>
+					<%= link_to "Voltar", {controller: "absences", action: "index"} %>
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+        <h4>Viaturas</h4>
+				<div class="form-group">
+					<%= collection_select(:car, :id, @cars, :id, :name, {}, { :multiple => true, :class => "form-control form-control-sm" }) %>
+				</div>
+			</div>
+		<div class="col-sm-2"></div>
+	</div>
+<% end %>

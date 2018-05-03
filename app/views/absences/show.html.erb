@@ -1,0 +1,63 @@
+<div class="row">
+   <div class="card-body">
+      <h1 class="text-left">Detalhes da Ausência Nº <%= @absence.id %></h1>
+   </div>
+</div>
+<hr><br>
+
+
+<div class="row">
+  <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <table>
+        <thead>
+          <tr>
+            <td><strong>Data da saída</strong></td>
+            <td><%= @absence.date_out %></td>
+            <td>&nbsp&nbsp&nbsp</td>
+            <td><strong>Horário da saída</strong></td>
+            <td><%= @absence.exit_time %></td>
+          </tr>
+          <tr>
+            <td><strong>Data do retorno</strong></td>
+            <td><%= @absence.return_date %></td>
+            <td>&nbsp&nbsp&nbsp</td>
+            <td><strong>Horário do retorno</strong></td>
+            <td><%= @absence.return_time %></td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  <div class="col-sm-2"></div>
+</div><hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h4>Justificativa:</h4>
+    <p><%= @absence.justification %></p>
+  </div>
+  <div class="col-sm-2"></div>
+</div><hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h4>Bombeiros envolvidos</h4>
+      <% @absence.firefighters.each do |firefighter| %>
+        <%= firefighter.name %> - 
+      <% end %>
+  </div>
+  <div class="col-sm-2"></div>
+</div><hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h4>Veículos envolvidos</h4>
+      <% @absence.cars.each do |car| %>
+        <%= car.name %> - 
+      <% end %>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

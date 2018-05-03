@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Controle de Ausências </h1>
+  </div>
+</div>
+<hr><br>
+
+<div class="row">
+	<div class="col-sm-12">
+		<%= link_to "Nova Ausência", {controller: "absences", action: "new"}, class: "btn btn-default" %>
+	</div>
+</div><br>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data de saída</th>
+        <th>Horário de saída</th>
+        <th>Data de retorno</th>
+        <th>Horário de retorno</th>
+        <th>Justificativa</th>
+        <th>Ver detalhes</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <thead>
+      <% @absences.each do |absence| %>
+        <tr>
+          <td><%= absence.date_out %></td>
+          <td><%= absence.exit_time %></td>
+          <td><%= absence.return_date %></td>
+          <td><%= absence.return_time %></td>
+          <td><%= absence.justification %></td>
+          <td><%= link_to "Ver detalhes", absence_path(absence) %></td>
+          <td><%= link_to "Editar", edit_absence_path(absence) %></td>
+          <td><%= link_to "Excluir", absence_path(absence), method: :delete, data:{confirm: "Tem certeza?"} %></td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
+</div>
