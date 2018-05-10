@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Tipos de Ocorrências</h1>
+  </div>
+</div>
+<hr><br>
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <%= link_to "Novo tipo de ocorrência", {controller: "type_occurrences", action: "new" }, class: "btn btn-default" %>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome / Tipo da Ocorrência</th>
+          <th>Código</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+          <th>Ocorrências</th>
+        </tr>
+      </thead>
+      <% @type_occurrences.each do |type_occurrence| %>
+        <tr>
+          <td><%= type_occurrence.name %></td>
+          <td><%= type_occurrence.code %></td>
+          <td><%= link_to "Editar", edit_type_occurrence_path(type_occurrence) %></td>
+          <td><%= link_to "Apagar", type_occurrence_path(type_occurrence), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+          <td>Ocorrências</td>
+        </tr>
+      <% end %>
+    </table>
+  </div>

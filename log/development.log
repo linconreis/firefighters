@@ -51061,3 +51061,986 @@ Migrating to RemovePassengersFromAbsences (20180503203249)
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3409675793835498390)[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-05-07 16:36:39 -0300
+  [1m[35m (31.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 578ms (Views: 564.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-05-07 16:36:42 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (59.9ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (146.9ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 193ms (Views: 83.7ms | ActiveRecord: 89.2ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-05-07 16:36:43 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (596.5ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (0.7ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Firefighter Load (0.0ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (634.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 670ms (Views: 61.9ms | ActiveRecord: 602.3ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:36:45 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (27.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (17.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (110.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 146ms (Views: 83.2ms | ActiveRecord: 56.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:36:47 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (1.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 42.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/absences" for 127.0.0.1 at 2018-05-07 16:36:49 -0300
+Processing by AbsencesController#index as HTML
+  Rendering absences/index.html.erb within layouts/application
+  [1m[36mAbsence Load (32.2ms)[0m  [1m[34mSELECT "absences".* FROM "absences" ORDER BY "absences"."date_out" ASC[0m
+  Rendered absences/index.html.erb within layouts/application (63.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 72.2ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/absences/2" for 127.0.0.1 at 2018-05-07 16:36:51 -0300
+Processing by AbsencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAbsence Load (0.9ms)[0m  [1m[34mSELECT  "absences".* FROM "absences" WHERE "absences"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering absences/show.html.erb within layouts/application
+  [1m[36mFirefighter Load (22.3ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" INNER JOIN "absences_firefighters" ON "firefighters"."id" = "absences_firefighters"."firefighter_id" WHERE "absences_firefighters"."absence_id" = $1[0m  [["absence_id", 2]]
+  [1m[36mCar Load (19.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" INNER JOIN "absences_cars" ON "cars"."id" = "absences_cars"."car_id" WHERE "absences_cars"."absence_id" = $1[0m  [["absence_id", 2]]
+  Rendered absences/show.html.erb within layouts/application (112.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 163ms (Views: 85.1ms | ActiveRecord: 53.5ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:36:54 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-05-07 16:36:55 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:36:57 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 64.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/districts/new" for 127.0.0.1 at 2018-05-07 16:37:00 -0300
+Processing by DistrictsController#new as HTML
+  Rendering districts/new.html.erb within layouts/application
+  Rendered districts/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/districts" for 127.0.0.1 at 2018-05-07 16:37:06 -0300
+Processing by DistrictsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"02wsVtuzkQDL51vPmzmvmO9SyyL09D+TU7uZr7B9cXjG79OhzY6sTBRTZnhHyxvD6n6Eh4QN/RKFhrxEZw3PTw==", "district"=>{"name"=>"Campo do Meio"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "districts" WHERE "districts"."name" = $1 LIMIT $2[0m  [["name", "Campo do Meio"], ["LIMIT", 1]]
+  [1m[35mSQL (14.9ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Campo do Meio"], ["created_at", "2018-05-07 19:37:06.864609"], ["updated_at", "2018-05-07 19:37:06.864609"]]
+  [1m[35m (104.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/districts
+Completed 302 Found in 130ms (ActiveRecord: 120.6ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:37:06 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 4]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 47.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/districts/4/adresses" for 127.0.0.1 at 2018-05-07 16:37:11 -0300
+Processing by AdressesController#index as HTML
+  Parameters: {"district_id"=>"4"}
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering adresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = 4[0m
+  Rendered adresses/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-07 16:37:13 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 4]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-07 16:37:16 -0300
+Processing by AuthController#index as HTML
+  Rendering auth/index.html.erb within layouts/application
+  Rendered auth/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2018-05-07 16:37:22 -0300
+Processing by AuthController#sign_in as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0bTf2bim0pv5EB6HjiKmdrDDl5JqPCkVOcguvd5ldbynRsZQg/4OYpIu7En0GWoI9ajME4qIdM/ur3tjKnnow==", "firefighter"=>{"registration"=>"777777", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "777777"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-07 16:37:22 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[36mFirefighter Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "777777"], ["LIMIT", 1]]
+  [1m[36mFirefighter Load (0.6ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."registration" = $1 LIMIT $2[0m  [["registration", "777777"], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-05-07 16:37:25 -0300
+Processing by AuthController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-07 16:37:25 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-10 09:53:32 -0300
+  [1m[35m (43.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 576ms (Views: 549.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-10 10:12:08 -0300
+  [1m[35m (31.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 285ms (Views: 275.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-10 10:30:40 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 446ms (Views: 437.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 10:31:07 -0300
+Processing by TypeOccurrencesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant TypeOccurrencesController::OcurrenceType):
+  
+app/controllers/type_occurrences_controller.rb:4:in `index'
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 10:31:41 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  Rendered type_occurrences/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 10:34:13 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  Rendered type_occurrences/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:40:40 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @type_occurrence, url: {controller: "type_occurrences", action: "create"} do |f| %>
+    2: 
+    3:   <% if @type_occurrence.errors.any? %>
+    4:     <div class="alert alert-danger" role="alert" >
+  
+app/views/type_occurrences/new.html.erb:1:in `_app_views_type_occurrences_new_html_erb___769187718667401368_70285377976300'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:41:31 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 42.4ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:54:23 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (48.6ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 7.8ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    27:       </div>
+    28:       <div class="form-group">
+    29:         <%= label_tag "Código da ocorrência" %>
+    30:         <%= f.number_field %>
+    31:       </div>
+    32:     </div>
+    33:     <div class="col-sm-2"></div>
+  
+app/views/type_occurrences/new.html.erb:30:in `block in _app_views_type_occurrences_new_html_erb___769187718667401368_70285378164240'
+app/views/type_occurrences/new.html.erb:1:in `_app_views_type_occurrences_new_html_erb___769187718667401368_70285378164240'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:54:50 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:55:38 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 10:55:50 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 10:57:11 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RGc7Jm5A20xjgAjUvVsHgaFA7G4T1zHlUUZpucNOjkxVsy6MYGS0rfzRmv1xttIltou9Z9MN7Kupalyugw/6Nw==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: type_occurrences):
+  
+app/controllers/type_occurrences_controller.rb:50:in `type_occurrence_params'
+app/controllers/type_occurrences_controller.rb:12:in `create'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:01:26 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 50.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:01:30 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F18gS4G/TZBSp638NYEon8mCTGRAUOVkHNngmL4OwwwGizXhj5sicc32P9X5bP073kkdbYCKOCrk9dWP/k+3dw==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: type_occurrences):
+  
+app/controllers/type_occurrences_controller.rb:53:in `type_occurrence_params'
+app/controllers/type_occurrences_controller.rb:12:in `create'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:02:28 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 33.9ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:02:32 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TskYdzkIHOe2VNtLvDJj1z13c5v6Wa3h6ypc22pG7sRfHQ3dNyxzBikFSWJw37ZzKrwikjqDcK8TBmnMKgeavw==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: type_occurrences):
+  
+app/controllers/type_occurrences_controller.rb:53:in `ocurrence_type_params'
+app/controllers/type_occurrences_controller.rb:12:in `create'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:03:08 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 38.5ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:03:12 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kpLLO1t1wOcxc8UZaPH3FFFC5Psfitp5oRDODg/1+jeDRt6RVVGvBq4iVzCkHCKwRom18t9QBzdZPPsZT7SOTA==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: type_occurrence):
+  
+app/controllers/type_occurrences_controller.rb:50:in `type_occurrence_params'
+app/controllers/type_occurrences_controller.rb:12:in `create'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:03:33 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 72ms (Views: 44.9ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:03:37 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KOOBbVNEabIY6DJ4AbO3PL3QlQnQco7tGG+Lkj2MKTk5N5THXWAGU4e5oFHNXmKYqhvEABCoU6PgQ76Ffc1dQg==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: occurrencetype):
+  
+app/controllers/type_occurrences_controller.rb:50:in `type_occurrence_params'
+app/controllers/type_occurrences_controller.rb:12:in `create'
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:03:56 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 36.4ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:04:00 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QJKZ8nLpuICD5cH6dCzq+0SNbJfJ/NPWjiu6Qjm0L2lRRoxYfM3XYRy0U9O4wT9fU0Y9ngkmDph2B49VefVbEg==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[32mINSERT INTO "occurrence_types" ("code", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["code", 29], ["name", "Buscas"], ["created_at", "2018-05-10 14:04:00.832142"], ["updated_at", "2018-05-10 14:04:00.832142"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 61ms (ActiveRecord: 53.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:04:00 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  Rendered type_occurrences/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:04:37 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  Rendered type_occurrences/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:09:05 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (323.6ms)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `type_occurrences' for #<#<Class:0x00007fd92d995a30>:0x00007fd92c7e2860>
+Did you mean?  type_occurrence
+               @type_occurrences
+               type_occurrences_url
+               type_occurrence_url):
+    23:       </thead>
+    24:       <% @type_occurrences.each do |type_occurrence| %>
+    25:         <tr>
+    26:           <td><%= type_occurrences.name %></td>
+    27:           <td><%= type_occurrence.code %></td>
+    28:           <td><%= link_to "Editar", edit_type_ocurrence_path(type_occurrence) %></td>
+    29:         </tr>
+  
+app/views/type_occurrences/index.html.erb:26:in `block in _app_views_type_occurrences_index_html_erb__1703180393579333361_70285365555700'
+app/views/type_occurrences/index.html.erb:24:in `_app_views_type_occurrences_index_html_erb__1703180393579333361_70285365555700'
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:09:13 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (162.7ms)
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_type_ocurrence_path' for #<#<Class:0x00007fd92d995a30>:0x00007fd92c7a65b8>
+Did you mean?  edit_type_occurrence_path
+               edit_type_occurrence_url
+               new_type_occurrence_path):
+    25:         <tr>
+    26:           <td><%= type_occurrence.name %></td>
+    27:           <td><%= type_occurrence.code %></td>
+    28:           <td><%= link_to "Editar", edit_type_ocurrence_path(type_occurrence) %></td>
+    29:         </tr>
+    30:       <% end %>
+    31:     </table>
+  
+app/views/type_occurrences/index.html.erb:28:in `block in _app_views_type_occurrences_index_html_erb__1703180393579333361_70285365544280'
+app/views/type_occurrences/index.html.erb:24:in `_app_views_type_occurrences_index_html_erb__1703180393579333361_70285365544280'
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:09:27 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:10:12 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:12:51 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (166.9ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `occurrence_type_path' for #<#<Class:0x00007fd92d995a30>:0x00007fd92df5a6a0>):
+    27:           <td><%= type_occurrence.name %></td>
+    28:           <td><%= type_occurrence.code %></td>
+    29:           <td><%= link_to "Editar", edit_type_occurrence_path(type_occurrence) %></td>
+    30:           <td><%= link_to "Apagar", type_occurrence, method: :delete, data: {confirm: "Tem certeza?"} %></td>
+    31:           <td></td>
+    32:         </tr>
+    33:       <% end %>
+  
+app/views/type_occurrences/index.html.erb:30:in `block in _app_views_type_occurrences_index_html_erb__1703180393579333361_70285377853400'
+app/views/type_occurrences/index.html.erb:25:in `_app_views_type_occurrences_index_html_erb__1703180393579333361_70285377853400'
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:15:07 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:16:37 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:16:51 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.4ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:16:57 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:17:24 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8bIDS92luth7kc49B+0X6kFD/g20U81mPjQD3tpt5lWW1EzFqfHnldtUxOD2GaKzV+5dIxGvv9lB7AGJnXfFYQ==", "occurrence_type"=>{"name"=>"Resgate", "code"=>"24"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "occurrence_types" ("code", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["code", 24], ["name", "Resgate"], ["created_at", "2018-05-10 14:17:24.840331"], ["updated_at", "2018-05-10 14:17:24.840331"]]
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 50ms (ActiveRecord: 43.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:17:24 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 11:17:26 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:17:42 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u3xYSG127RnOTOIZsau8HaRV10dfOaqGl/FnGPODYprcGhfGGSKwVG6J6MRAXwlEsvh0afrF2DnoKWVPtJlBrg==", "occurrence_type"=>{"name"=>"Combate a incêndio", "code"=>"38"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "occurrence_types" ("code", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["code", 38], ["name", "Combate a incêndio"], ["created_at", "2018-05-10 14:17:42.030850"], ["updated_at", "2018-05-10 14:17:42.030850"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 47ms (ActiveRecord: 41.8ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:17:42 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-10 11:20:41 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-10 11:20:41 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (29.0ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (33.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 4]]
+  [1m[36mAddress Load (10.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (201.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 240ms (Views: 143.9ms | ActiveRecord: 88.6ms)
+
+
+Started GET "/pluviometers" for 127.0.0.1 at 2018-05-10 11:20:42 -0300
+Processing by PluviometersController#index as HTML
+  Rendering pluviometers/index.html.erb within layouts/application
+  [1m[36mPluviometer Load (18.0ms)[0m  [1m[34mSELECT "pluviometers".* FROM "pluviometers" ORDER BY "pluviometers"."date" ASC[0m
+  [1m[36mFirefighter Load (37.6ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Firefighter Load (0.1ms)[0m  [1m[34mSELECT  "firefighters".* FROM "firefighters" WHERE "firefighters"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered pluviometers/index.html.erb within layouts/application (138.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 178ms (Views: 104.0ms | ActiveRecord: 67.6ms)
+
+
+Started GET "/firefighters" for 127.0.0.1 at 2018-05-10 11:20:43 -0300
+Processing by FirefightersController#index as HTML
+  Rendering firefighters/index.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.9ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  Rendered firefighters/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/type_of_cars" for 127.0.0.1 at 2018-05-10 11:20:43 -0300
+Processing by TypeOfCarsController#index as HTML
+  Rendering type_of_cars/index.html.erb within layouts/application
+  [1m[36mTypeOfCar Load (2.6ms)[0m  [1m[34mSELECT "type_of_cars".* FROM "type_of_cars" ORDER BY "type_of_cars"."name" ASC[0m
+  [1m[36mCar Load (2.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 1]]
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 3]]
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."type_of_car_id" = $1[0m  [["type_of_car_id", 2]]
+  Rendered type_of_cars/index.html.erb within layouts/application (73.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 86.8ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/absences" for 127.0.0.1 at 2018-05-10 11:20:44 -0300
+Processing by AbsencesController#index as HTML
+  Rendering absences/index.html.erb within layouts/application
+  [1m[36mAbsence Load (36.8ms)[0m  [1m[34mSELECT "absences".* FROM "absences" ORDER BY "absences"."date_out" ASC[0m
+  Rendered absences/index.html.erb within layouts/application (67.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 50.6ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:20:44 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/absences" for 127.0.0.1 at 2018-05-10 11:20:45 -0300
+Processing by AbsencesController#index as HTML
+  Rendering absences/index.html.erb within layouts/application
+  [1m[36mAbsence Load (0.6ms)[0m  [1m[34mSELECT "absences".* FROM "absences" ORDER BY "absences"."date_out" ASC[0m
+  Rendered absences/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/absences/new" for 127.0.0.1 at 2018-05-10 11:20:47 -0300
+Processing by AbsencesController#new as HTML
+  Rendering absences/new.html.erb within layouts/application
+  [1m[36mFirefighter Load (0.8ms)[0m  [1m[34mSELECT "firefighters".* FROM "firefighters" ORDER BY "firefighters"."name" ASC[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."name" ASC[0m
+  Rendered absences/new.html.erb within layouts/application (39.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 81.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/districts" for 127.0.0.1 at 2018-05-10 11:20:50 -0300
+Processing by DistrictsController#index as HTML
+  Rendering districts/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT "districts".* FROM "districts" ORDER BY "districts"."name" ASC[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 3]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 4]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 2]]
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."district_id" = $1[0m  [["district_id", 1]]
+  Rendered districts/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 11:20:52 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:42:55 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/type_occurrences/1/edit" for 127.0.0.1 at 2018-05-10 13:42:57 -0300
+Processing by TypeOccurrencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering type_occurrences/edit.html.erb within layouts/application
+  Rendered type_occurrences/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @type_occurrence, url: {controller: "type_occurrences", action: "update"} do |f| %>
+    2: 
+    3:   <% if @type_occurrence.errors.any? %>
+    4:     <div class="alert alert-danger" role="alert" >
+  
+app/views/type_occurrences/edit.html.erb:1:in `_app_views_type_occurrences_edit_html_erb___2789334780571378851_70285380402480'
+Started GET "/type_occurrences/1/edit" for 127.0.0.1 at 2018-05-10 13:43:57 -0300
+Processing by TypeOccurrencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering type_occurrences/edit.html.erb within layouts/application
+  Rendered type_occurrences/edit.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 39.2ms | ActiveRecord: 8.8ms)
+
+
+Started PATCH "/type_occurrences/1" for 127.0.0.1 at 2018-05-10 13:44:03 -0300
+Processing by TypeOccurrencesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py1QEitYT5qT1avdyk3ZKUixbMstcHTYEpGRqxkFceAu+UW4JXwgewyEOfQGoAyNX3o9wu2qqZbqvaS8WUQFmw==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"00"}, "commit"=>"Atualizar", "id"=>"1"}
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "occurrence_types" SET "code" = $1, "updated_at" = $2 WHERE "occurrence_types"."id" = $3[0m  [["code", 0], ["updated_at", "2018-05-10 16:44:03.919688"], ["id", 1]]
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 37ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:44:03 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences/1/edit" for 127.0.0.1 at 2018-05-10 13:44:05 -0300
+Processing by TypeOccurrencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering type_occurrences/edit.html.erb within layouts/application
+  Rendered type_occurrences/edit.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/type_occurrences/1" for 127.0.0.1 at 2018-05-10 13:44:08 -0300
+Processing by TypeOccurrencesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ou5VXgyLNmpsmYMB+jtTu/wDOt1WOuw+k+SGjVNXYkEOU5cim2UU3jqeEOZpxy2Jr2oiMveQk5MV6eTY9vNrDg==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"29"}, "commit"=>"Atualizar", "id"=>"1"}
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "occurrence_types" SET "code" = $1, "updated_at" = $2 WHERE "occurrence_types"."id" = $3[0m  [["code", 29], ["updated_at", "2018-05-10 16:44:08.571196"], ["id", 1]]
+  [1m[35m (38.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 50ms (ActiveRecord: 40.2ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:44:08 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/type_occurrences/new" for 127.0.0.1 at 2018-05-10 13:44:11 -0300
+Processing by TypeOccurrencesController#new as HTML
+  Rendering type_occurrences/new.html.erb within layouts/application
+  Rendered type_occurrences/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:44:14 -0300
+Processing by TypeOccurrencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tENE8pNijpetv8/s/UJz3ijk+tOX426rxqPdNXUSBlnTJQt85zbT2g16xTEMtsaHPklZ/TIfHBS5e99iMgglbQ==", "occurrence_type"=>{"name"=>"Buscas", "code"=>"00"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "occurrence_types" ("code", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["code", 0], ["name", "Buscas"], ["created_at", "2018-05-10 16:44:14.995371"], ["updated_at", "2018-05-10 16:44:14.995371"]]
+  [1m[35m (192.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 199ms (ActiveRecord: 193.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:44:15 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.8ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/type_occurrences/4" for 127.0.0.1 at 2018-05-10 13:44:18 -0300
+Processing by TypeOccurrencesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xv3atDFEVwFs2JJ1GVBrFAlHTCXeMUa6+JRWThw7LXTXKc8eP2A44POJAFzVvb6wHowdLB7rm/QAuGNZXHpZDw==", "id"=>"4"}
+  [1m[36mOccurrenceType Load (0.6ms)[0m  [1m[34mSELECT  "occurrence_types".* FROM "occurrence_types" WHERE "occurrence_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (46.1ms)[0m  [1m[31mDELETE FROM "occurrence_types" WHERE "occurrence_types"."id" = $1[0m  [["id", 4]]
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/type_occurrences
+Completed 302 Found in 67ms (ActiveRecord: 60.9ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:44:18 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:45:11 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:48:22 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:48:28 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/absences" for 127.0.0.1 at 2018-05-10 13:48:29 -0300
+Processing by AbsencesController#index as HTML
+  Rendering absences/index.html.erb within layouts/application
+  [1m[36mAbsence Load (0.6ms)[0m  [1m[34mSELECT "absences".* FROM "absences" ORDER BY "absences"."date_out" ASC[0m
+  Rendered absences/index.html.erb within layouts/application (27.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 48.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:48:29 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:48:31 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.7ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_occurrences" for 127.0.0.1 at 2018-05-10 13:48:31 -0300
+Processing by TypeOccurrencesController#index as HTML
+  Rendering type_occurrences/index.html.erb within layouts/application
+  [1m[36mOccurrenceType Load (0.5ms)[0m  [1m[34mSELECT "occurrence_types".* FROM "occurrence_types" ORDER BY "occurrence_types"."name" ASC[0m
+  Rendered type_occurrences/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+
+

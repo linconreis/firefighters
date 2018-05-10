@@ -67,4 +67,6 @@ rails g migration CreateJoinTableFirefighterEventLog firefighter event_log
     end
   end
 
+Controller com duas palavras 
+rails g controller typeOcurrences
 

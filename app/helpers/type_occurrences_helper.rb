@@ -1,0 +1,2 @@
+module TypeOccurrencesHelper
+end
