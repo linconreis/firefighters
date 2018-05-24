@@ -29,7 +29,7 @@
           <td><%= type_occurrence.code %></td>
           <td><%= link_to "Editar", edit_type_occurrence_path(type_occurrence) %></td>
           <td><%= link_to "Apagar", type_occurrence_path(type_occurrence), method: :delete, data: {confirm: "Tem certeza?"} %></td>
-          <td>Ocorrências</td>
+          <td><%= link_to "Ocorrências", type_occurrence_event_logs_path(type_occurrence) %></td>
         </tr>
       <% end %>
     </table>

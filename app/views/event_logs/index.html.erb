@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Lista de Ocorrências Cadastradas em <%= @type_occurrence.name %> </h1>
+  </div>
+</div>
+<hr><br>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to "Nova Ocorrência", {controller: "event_logs", action: "new"}, class: "btn btn-default" %>
+    <%= link_to "Voltar", {controller:"type_occurrences", action: "index"}, class: "btn btn-default" %>
+  </div>
+</div>
