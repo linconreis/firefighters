@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="card-body">
+    <h1 class="text-center">Lista de Todas Ocorrências Cadastradas</h1>
+  </div>
+</div>
+<hr><br>
+
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Solicitante</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Ver detalhes</th>
+      </tr>
+    </thead>
+    <thead>
+    <% @event_logs.each do |event_log| %>
+        <tr>
+          <td><%= event_log.date %></td>
+          <td><%= event_log.requester %></td>
+          <td><%= event_log.phone %></td>
+          <td><%= event_log.address.name %></td>
+          <td>Ver detalhes</td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
+</div>

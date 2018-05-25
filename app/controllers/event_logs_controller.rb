@@ -7,6 +7,10 @@ class EventLogsController < ApplicationController
 
   end
 
+  def index_all
+    @event_logs = EventLog.order(:date).all
+  end
+
   def new
     @event_log = EventLog.new
     @firefighters = Firefighter.order(:name).all

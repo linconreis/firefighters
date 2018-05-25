@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'logout', to: 'auth#logout'
 
+  get 'all_occurrences', to: 'event_logs#index_all'
+
   
   #ROTAS CRUD
   resources :firefighters 
