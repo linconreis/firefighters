@@ -11,3 +11,31 @@
     <%= link_to "Voltar", {controller:"type_occurrences", action: "index"}, class: "btn btn-default" %>
   </div>
 </div>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Solicitante</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Ver detalhes</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <thead>
+    <% @event_logs.each do |event_log| %>
+        <tr>
+          <td><%= event_log.date %></td>
+          <td><%= event_log.requester %></td>
+          <td><%= event_log.phone %></td>
+          <td>Ver detalhes</td>
+          <td>Editar</td>
+          <td>Excluir</td>
+        </tr>
+      <% end %>
+    </thead>
+  </table>
+</div>

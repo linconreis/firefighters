@@ -1,7 +1,8 @@
 class EventLogsController < ApplicationController
 
   def index
-    @event_logs = EventLog.where :type_occurrence => params[:type_occurrence_id]
+    #@event_logs = EventLog.order(:date).all
+    @event_logs = EventLog.where :occurrence_type => params[:type_occurrence_id]
     @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
 
   end
@@ -26,7 +27,7 @@ class EventLogsController < ApplicationController
     @event_log.cars = cars
     @event_log.address = address 
     @event_log.occurrence_type = @type_occurrence
-    # precisa né? :)
+
 
     if @event_log.save
       redirect_to controller: "event_logs"
