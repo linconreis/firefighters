@@ -19,5 +19,9 @@ module Firefighters
     config.generators do |g|
       g.javascript_engine :js
     end
+
+    #Horário Brasil
+      config.time_zone = 'Brasilia'
+
   end
 end

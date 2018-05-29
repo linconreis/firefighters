@@ -28,10 +28,10 @@
     <thead>
       <% @absences.each do |absence| %>
         <tr>
-          <td><%= absence.date_out %></td>
-          <td><%= absence.exit_time %></td>
-          <td><%= absence.return_date %></td>
-          <td><%= absence.return_time %></td>
+          <td><%= format_date(absence.date_out) %></td>
+          <td><%= format_time(absence.exit_time) %></td>
+          <td><%= format_date(absence.return_date) %></td>
+          <td><%= format_time(absence.return_time) %></td>
           <td><%= absence.justification %></td>
           <td><%= link_to "Ver detalhes", absence_path(absence) %></td>
           <td><%= link_to "Editar", edit_absence_path(absence) %></td>
