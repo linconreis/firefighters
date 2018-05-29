@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503203249) do
+ActiveRecord::Schema.define(version: 20180529173146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(version: 20180503203249) do
     t.string "descriptive_memorial"
     t.string "measures_taken"
     t.string "comments"
-    t.string "on_duty"
     t.string "climate_conditions"
     t.boolean "finished", default: false
     t.datetime "created_at", null: false
