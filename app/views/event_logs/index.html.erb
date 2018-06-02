@@ -28,7 +28,7 @@
     <thead>
     <% @event_logs.each do |event_log| %>
         <tr>
-          <td><%= event_log.date %></td>
+          <td><%= format_date(event_log.date) %></td>
           <td><%= event_log.requester %></td>
           <td><%= event_log.phone %></td>
           <td><%= event_log.address.name %></td>

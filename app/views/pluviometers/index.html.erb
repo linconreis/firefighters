@@ -28,7 +28,7 @@
 			<% @pluviometers.each do |pluviometer| %>
 				<tr>
 					<td><%= pluviometer.firefighter.name %></td>
-					<td><%= pluviometer.date %></td>
+					<td><%= format_date(pluviometer.date) %></td>
 					<td class="text-center"><%= pluviometer.last_twenty_four %>mm</td>
 					<td class="text-center"><%= pluviometer.last_forty_eight %>mm</td>
 					<% if pluviometer.note.present? %>
