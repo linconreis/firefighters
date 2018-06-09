@@ -89,3 +89,31 @@
   </div>
   <div class="col-sm-2"></div>
 </div>
+<hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Bombeiros envolvidos na ocorrência</strong></h5>
+    <label>
+    <% @event_log.firefighters.each do |firefighter| %>
+        <%= firefighter.name %> <%= firefighter.last_name %> - 
+      <% end %>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Viaturas envolvidos na ocorrência</strong></h5>
+    <label>
+    <% @event_log.cars.each do |car| %>
+        <%= car.name %> - 
+      <% end %>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
