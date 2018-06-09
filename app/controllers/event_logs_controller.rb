@@ -2,13 +2,13 @@ class EventLogsController < ApplicationController
 
   def index
     #@event_logs = EventLog.order(:date).all
-    @event_logs = EventLog.order(:date).where :occurrence_type => params[:type_occurrence_id]
+    @event_logs = EventLog.order(date: :desc).where :occurrence_type => params[:type_occurrence_id]
     @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
 
   end
 
   def index_all
-    @event_logs = EventLog.order(:date).all
+    @event_logs = EventLog.order(date: :desc).all
   end
 
   def new

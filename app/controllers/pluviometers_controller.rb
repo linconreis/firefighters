@@ -1,7 +1,8 @@
 class PluviometersController < ApplicationController
 
 	def index
-		@pluviometers = Pluviometer.order(:date).all
+    #cuidar os pontos na ordenacao de data - decrescente desc - crescente asc
+		@pluviometers = Pluviometer.order(date: :desc).all
 	end
 
 	def new

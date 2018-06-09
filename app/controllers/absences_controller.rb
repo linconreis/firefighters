@@ -1,7 +1,7 @@
 class AbsencesController < ApplicationController
 
 	def index
-		@absences = Absence.order(:date_out).all
+		@absences = Absence.order(date_out: :desc).all
 	end
 
 	def new
