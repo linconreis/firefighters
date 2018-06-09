@@ -127,7 +127,7 @@
                   <div class="col-sm-4">
                     <label>
                       <%= check_box_tag "firefighters[]", firefighter.id, @event_log.firefighters.exists?(firefighter.id) %>
-                      <%= firefighter.name %>
+                      <%= firefighter.name %> <%= firefighter.last_name %>
                     </label> 
                   </div>
                 <% end %>
