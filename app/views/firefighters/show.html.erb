@@ -22,7 +22,7 @@
 					<td><strong>Código de Matrícula:</strong> <%= @firefighter.registration %></td>
 				</tr>
 				<tr>
-					<td><strong>Data de Nascimento:</strong> <%= @firefighter.birth_date %></td>
+					<td><strong>Data de Nascimento:</strong> <%= format_date(@firefighter.birth_date) %></td>
 					<td><strong>Comandande? </strong>
 						<% if @firefighter.commandant == true %>
 							Sim

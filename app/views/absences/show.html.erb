@@ -13,17 +13,17 @@
         <thead>
           <tr>
             <td><strong>Data da saída</strong></td>
-            <td><%= @absence.date_out %></td>
+            <td><%= format_date(@absence.date_out) %></td>
             <td>&nbsp&nbsp&nbsp</td>
             <td><strong>Horário da saída</strong></td>
-            <td><%= @absence.exit_time %></td>
+            <td><%= format_time(@absence.exit_time) %></td>
           </tr>
           <tr>
             <td><strong>Data do retorno</strong></td>
-            <td><%= @absence.return_date %></td>
+            <td><%= format_date(@absence.return_date) %></td>
             <td>&nbsp&nbsp&nbsp</td>
             <td><strong>Horário do retorno</strong></td>
-            <td><%= @absence.return_time %></td>
+            <td><%= format_time(@absence.return_time) %></td>
           </tr>
         </thead>
       </table>

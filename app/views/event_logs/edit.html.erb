@@ -1,1 +1,191 @@
-edit.html.erb
+<%= form_for @event_log, url: {controller: "event_logs", action: "update"} do |f| %>
+  <% if @event_log.errors.any? %>
+    <div class="alert alert-danger">
+      <strong>Opss! Alguns erros foram encontrados</strong><br>
+      <% @event_log.errors.messages.values.each do |value| %>
+        <% value.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="card-body">
+        <h1 class="text-left">Atualizar Ocorrência</h1>
+      </div>
+  </div>
+  <hr><br>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-2">
+        <div class="form-group">
+          <%= label_tag "Data" %>
+          <%= f.date_field :date, class: "form-control form-control-sm" %>
+        </div>
+      </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <%= label_tag "Horário de saída" %>
+            <%= f.time_field :exit_time, class: "form-control form-control-sm" %>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <%= label_tag "Horário de retorno" %>
+            <%= f.time_field :return_time, class: "form-control form-control-sm" %>
+          </div>
+        </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= label_tag "Solicitante" %>
+          <%= f.text_field :requester, class: "form-control form-control-sm" %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= label_tag "Telefone" %>
+          <%= f.number_field :phone, class: "form-control form-control-sm" %>
+          </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="form-group">
+              <%= label_tag "Memorial descritivo" %>
+              <%= f.text_area :descriptive_memorial, class: "form-control form-control-sm" %>
+            </div>
+        </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+           <div class="form-group">
+            <%= label_tag "Providências tomadas" %>
+            <%= f.text_area :measures_taken, class: "form-control form-control-sm" %>
+          </div>
+        </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <%= label_tag "Obeservações" %>
+          <%= f.text_area :comments, class: "form-control form-control-sm" %>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <%= label_tag "Condições climáticas" %>
+        <%= f.text_area :climate_conditions, class: "form-control form-control-sm" %>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="card-body">
+        <h4 class="text-center">Digite o endereço da ocorrência</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <div class="form-group">
+          <%= collection_select(:address, :id, @adresses, :id, :name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm" }) %>
+        </div>
+        </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="card-body">
+        <h4 class="text-center">Selecione os bombeiros envolvidos na ocorrência</h4>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="form-group">
+          <div class="row">
+            <% @firefighters.in_groups_of(3, false) do |firefighters| %>
+                <% for firefighter in firefighters %>
+                  <div class="col-sm-4">
+                    <label>
+                      <%= check_box_tag "firefighters[]", firefighter.id, @event_log.firefighters.exists?(firefighter.id) %>
+                      <%= firefighter.name %>
+                    </label> 
+                  </div>
+                <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="card-body">
+      <h4 class="text-center">Selecione as viaturas envolvidas na ocorrência</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="form-group">
+          <div class="row">
+            <% @cars.in_groups_of(3, false) do |cars| %>
+                <% for car in cars %>
+                  <div class="col-sm-4">
+                    <label>
+                      <%= check_box_tag "cars[]", car.id, @event_log.cars.exists?(car.id) %>
+                      <%= car.name %>
+                    </label> 
+                  </div>
+                <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="form-check">
+          <%= label_tag "Ocorrência aprovada?" %>
+        </div>
+        <div class="form-check form-check-inline">
+          Sim
+          <%= f.radio_button :finished, true, class: "form-inline" %>
+        </div>
+        <div class="form-check form-check-inline">
+          Não
+          <%= f.radio_button :finished, false, class: "form-inline" %>
+        </div><br><br>
+        <div class="form-group">
+            <%= f.submit "Atualizar", class: "btn btn-default" %>
+            <%= link_to "Voltar", {controller: "type_occurrences", action: "index"}, class: "btn btn-link" %>
+          </div>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+<% end %>

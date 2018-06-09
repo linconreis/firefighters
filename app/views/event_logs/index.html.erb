@@ -22,7 +22,6 @@
         <th>Endereço</th>
         <th>Ver detalhes</th>
         <th>Editar</th>
-        <th>Excluir</th>
       </tr>
     </thead>
     <thead>
@@ -32,9 +31,8 @@
           <td><%= event_log.requester %></td>
           <td><%= event_log.phone %></td>
           <td><%= event_log.address.name %></td>
-          <td>Ver detalhes</td>
-          <td>Editar</td>
-          <td>Excluir</td>
+          <td><%= link_to "Ver detalhes", type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
+          <td><%= link_to "Editar", edit_type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
         </tr>
       <% end %>
     </thead>

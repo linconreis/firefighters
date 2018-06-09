@@ -1,0 +1,91 @@
+<div class="row">
+   <div class="card-body">
+      <h1 class="text-left">Dados da ocorrência</h1>
+   </div>
+</div>
+<hr><br>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <td><strong>Data</strong></td>
+            <td><%= format_date(@event_log.date) %></td>
+            <td><strong>H. de Saída</strong></td>
+            <td><%= format_time(@event_log.exit_time) %></td>
+            <td><strong>H. de retorno</strong></td>
+            <td><%= format_time(@event_log.return_time) %></td>
+          </tr>
+          <tr>
+            <td><strong>Código</strong></td>
+            <td><%= @event_log.occurrence_type.code %></td>
+            <td><strong>T. de Ocorrência</strong></td>
+            <td><%= @event_log.occurrence_type.name %></td>
+            <td><strong>Aprovada?</strong></td>
+            <% if @event_log.finished = true %>
+              <td>Finalizada</td>
+              <% else %>
+              <td>Pendente</td>
+            <% end %>
+          </tr>
+          <tr>
+            <td><strong>Solicitante</strong></td>
+            <td><%= @event_log.requester %></td>
+            <td><strong>Telefone</strong></td>
+            <td><%= @event_log.phone %></td>
+            <td><strong>Clima</strong></td>
+            <td><%= @event_log.climate_conditions %></td>
+        </thead>
+      </table>
+    </div>
+  <div class="col-sm-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Endereço</strong></h5>
+    <label>
+    <p><%= @event_log.address.name %></p>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Memorial descritivo</strong></h5>
+    <label>
+    <p><%= @event_log.descriptive_memorial %></p>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Providências tomadas</strong></h5>
+    <label>
+    <p><%= @event_log.measures_taken %></p>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <h5><strong>Observações</strong></h5>
+    <label>
+    <p><%= @event_log.comments %></p>
+    </label>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

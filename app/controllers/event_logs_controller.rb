@@ -2,7 +2,7 @@ class EventLogsController < ApplicationController
 
   def index
     #@event_logs = EventLog.order(:date).all
-    @event_logs = EventLog.where :occurrence_type => params[:type_occurrence_id]
+    @event_logs = EventLog.order(:date).where :occurrence_type => params[:type_occurrence_id]
     @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
 
   end
@@ -43,15 +43,40 @@ class EventLogsController < ApplicationController
       render :new
       flash[:danger] = "Opss! Algo deu errado!"
     end
+  end
 
+  def show
+    @event_log = EventLog.find(params[:id])
   end
 
   def edit
-    
+    @event_log = EventLog.find(params[:id])
+    @firefighters = Firefighter.order(:name).all
+    @cars = Car.order(:name).all
+    @adresses = Address.order(:name).all
   end
 
   def update
-    
+    firefighters = Firefighter.where id: params[:firefighters]
+    cars = Car.where id: params[:cars]
+    @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
+
+    address = Address.find(params[:address][:id])
+ 
+    @event_log = EventLog.find(params[:id])
+
+    @event_log.firefighters = firefighters
+    @event_log.cars = cars
+    @event_log.address = address 
+    @event_log.occurrence_type = @type_occurrence
+
+    if @event_log.update(event_log_params)
+      redirect_to controller: "event_logs"
+      flash[:success] = "Atualizado com sucesso!"
+    else
+      render :edit
+      flash[:danger] = "Opss! Algo deu errado"
+    end
   end
 
   def destroy
