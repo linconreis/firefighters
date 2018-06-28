@@ -40,7 +40,13 @@
 				<% end %>
 				</td>
 				<td><%= link_to "Editar", edit_district_adress_path(@district, address) %></td>
-				<td><%= link_to "Apagar", district_adress_path(@district, address), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+				
+        <% if address.event_logs.present? %>
+          <td><span class="badge badge-info">Em uso</span></td>
+        <% else %>
+          <td><%= link_to "Apagar", district_adress_path(@district, address), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+        <% end %>
+
 			</tr>
 		<% end %> 
 	</table>

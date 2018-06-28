@@ -25,7 +25,6 @@
 			<tr>
 				<td><%= district.name %></td>
 				<td><%= link_to "Editar", edit_district_path(district) %></td>
-
 				<% if district.addresses.present? %>
 					<td><span class="badge badge-info">Em uso</span></td>
 				<% else %>

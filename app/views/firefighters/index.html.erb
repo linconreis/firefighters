@@ -31,7 +31,11 @@
 					<td><%= firefighter.phone %></td>
 					<td><%= link_to "Visualizar", firefighter_path(firefighter) %></td>
 					<td><%= link_to "Editar", edit_firefighter_path(firefighter) %></td>
+          <% if firefighter.event_logs.present? or firefighter.absences.present? or firefighter.pluviometers.present? %>
+            <td><span class="badge badge-info">Em uso</span></td>
+          <% else %>
 					<td><%= link_to "Apagar", firefighter, method: :delete, data: {confirm: "Tem certeza?"} %></td>
+          <% end %>
 				</tr>
 			<% end %>
 		</table>

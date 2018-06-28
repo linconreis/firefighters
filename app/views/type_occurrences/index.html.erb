@@ -28,7 +28,11 @@
           <td><%= type_occurrence.name %></td>
           <td><%= type_occurrence.code %></td>
           <td><%= link_to "Editar", edit_type_occurrence_path(type_occurrence) %></td>
+          <% if type_occurrence.event_logs.present? %>
+            <td><span class="badge badge-info">Em uso</span></td>
+          <% else %>
           <td><%= link_to "Apagar", type_occurrence_path(type_occurrence), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+          <% end %>
           <td><%= link_to "Ocorrências", type_occurrence_event_logs_path(type_occurrence) %></td>
         </tr>
       <% end %>

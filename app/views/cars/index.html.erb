@@ -33,7 +33,11 @@
 				<td><%= car.board %></td>
 				<td><%= car.mileage %></td>
 				<td><%= link_to "Editar", edit_type_of_car_car_path(@type_of_car, car) %></td>
-				<td><%= link_to "Excluir", type_of_car_car_path(@type_of_car, car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+        <% if car.event_logs.present? or car.absences.present?%>
+          <td><span class="badge badge-info">Em uso</span></td>
+        <% else %>
+				  <td><%= link_to "Excluir", type_of_car_car_path(@type_of_car, car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+        <% end %>
 			</tr>
 		<% end %>
 	</table>
