@@ -16,6 +16,9 @@ class EventLogsController < ApplicationController
     @firefighters = Firefighter.order(:name).all
     @cars = Car.order(:name).all
     @adresses = Address.order(:name).all
+    
+    #buscar o tipo de ocorrencia no titulo do cadastro
+    @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
   end
 
   def create

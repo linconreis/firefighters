@@ -7,6 +7,7 @@ class CarsController < ApplicationController
 
 	def new
 		@car = Car.new
+    @type_of_car = TypeOfCar.find(params[:type_of_car_id])
 	end
 
 	def create

@@ -1,54 +1,54 @@
 <%= form_for @address, url: {controller: "adresses", action: "create"} do |f| %>
 
-	<%if @address.errors.any? %>
-		<div class="alert alert-danger" role="alert">
-			<strong>Opss! Alguns erros foram encontrados</strong><br>
-			<% @address.errors.messages.values.each do |value| %>
-				<% value.each do |message| %>
-					<%= message %>
-				<% end %>
-			<% end %>
-		</div>
-	<% end %>
+  <%if @address.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <strong>Opss! Alguns erros foram encontrados</strong><br>
+      <% @address.errors.messages.values.each do |value| %>
+        <% value.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
 
 
-	<div class="row">
-		<div class="card-body">
-	    	<h1 class="text-left">Nova Rua</h1>
-	  	</div>
-	</div>
-	<hr><br>
+  <div class="row">
+    <div class="card-body">
+        <h1 class="text-left">Nova rua no bairro <%= @district.name%></h1>
+      </div>
+  </div>
+  <hr><br>
 
-	<div class="row">
-		<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<div class="form-group">
-					<%= label_tag "Nome da rua" %>
-					<%= f.text_field :name, class: "form-control form-control-sm" %>
-				</div>
-				<div class="form-group">
-					<%= label_tag "Possui hidrante?" %>
-					<div class="row">
-						<div class="col-sm-2">
-							Sim
-							<%= f.radio_button :hydrant, true, class: "form-inline" %>
-						</div>
-						<div class="col-sm-2">
-							Não
-							<%= f.radio_button :hydrant, false, class: "form-inline" %>
-						</div>
-						<div class="col-sm-8"></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<%= label_tag "Ponto de Referência" %>
-					<%= f.text_field :reference_point, class: "form-control form-control-sm" %>
-				</div>
-				<div class="form-group">
-					<%= f.submit "Cadastrar", class: "btn btn-default"  %>
-				  	<%= link_to "Voltar", {controller: "adresses", action: "index"}, class: "btn btn-link" %>
-				</div>
-			</div>
-		<div class="col-sm-2"></div>
-	</div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="form-group">
+          <%= label_tag "Nome da rua" %>
+          <%= f.text_field :name, class: "form-control form-control-sm" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag "Possui hidrante?" %>
+          <div class="row">
+            <div class="col-sm-2">
+              Sim
+              <%= f.radio_button :hydrant, true, class: "form-inline" %>
+            </div>
+            <div class="col-sm-2">
+              Não
+              <%= f.radio_button :hydrant, false, class: "form-inline" %>
+            </div>
+            <div class="col-sm-8"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= label_tag "Ponto de Referência" %>
+          <%= f.text_field :reference_point, class: "form-control form-control-sm" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Cadastrar", class: "btn btn-default"  %>
+            <%= link_to "Voltar", {controller: "adresses", action: "index"}, class: "btn btn-link" %>
+        </div>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
 <% end %>

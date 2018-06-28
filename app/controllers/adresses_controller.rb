@@ -7,6 +7,8 @@ class AdressesController < ApplicationController
 
   def new
   	@address = Address.new
+    #puxar o bairro em que a rua está sendo cadastrada
+    @district = District.find(params[:district_id])
   end
 
   def create
