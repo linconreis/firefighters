@@ -15,8 +15,14 @@ require 'digest'
 
   	if firefighter.present?
   		if firefighter.password == Digest::SHA256.hexdigest(password)
-  		add_firefighter_session(firefighter.registration)
-  		redirect_to controller: "welcome"
+        if firefighter.renew_password == true
+          add_firefighter_session(firefighter.registration)
+          redirect_to controller: "auth", action: "change_password"
+          flash[:info] = "Primeiro acesso, favor alterar a senha"
+        else
+          add_firefighter_session(firefighter.registration)
+          redirect_to controller: "welcome"
+        end
   		else
   			flash[:warning] = "Senha inválida!"
   			redirect_to controller: "auth"
@@ -32,4 +38,21 @@ require 'digest'
     flash[:success] = "Você foi desconectado com sucesso!"
     redirect_to controller: "welcome"
   end
+
+  def change_password
+    firefighter = Firefighter.find(get_firefighter_session.id)
+  end
+
+  def redefine
+    firefighter = Firefighter.find(get_firefighter_session.id)
+    firefighter.password = Digest::SHA256.hexdigest params[:firefighter][:password]
+    firefighter.renew_password = false
+    if firefighter.save
+      destroy_firefighter_session
+      flash[:success] = "Senha alterada com sucesso, favor reconectar!"
+      redirect_to controller: "welcome"
+    end
+  end
+
+
 end

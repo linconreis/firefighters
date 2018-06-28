@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   get 'all_occurrences', to: 'event_logs#index_all'
 
+  get 'first_access', to: 'auth#change_password'
+
+  post 'change_password', to: 'auth#redefine'
+
   
   #ROTAS CRUD
   resources :firefighters 
@@ -34,3 +38,4 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+

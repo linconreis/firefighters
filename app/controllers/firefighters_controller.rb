@@ -49,6 +49,7 @@ class FirefightersController < ApplicationController
 		flash[:success] = "Excluído com sucesso"		
 	end
 
+
 	private
 
 		def firefighter_params
