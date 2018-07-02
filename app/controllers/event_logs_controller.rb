@@ -83,7 +83,10 @@ class EventLogsController < ApplicationController
   end
 
   def destroy
-    
+    @event_log = EventLog.find(params[:id])
+    @event_log.destroy
+    redirect_to controller: "event_logs"
+    flash[:success] = "Excluído com sucesso"
   end
 
   private
