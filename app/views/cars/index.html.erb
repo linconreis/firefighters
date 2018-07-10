@@ -13,32 +13,36 @@
 </div>
 
 <div class="row">
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Marca</th>
-				<th>Nome</th>
-				<th>Ano</th>
-				<th>Placa</th>
-				<th>Quilometragem</th>
-				<th>Editar</th>
-				<th>Excluir</th>
-			</tr>
-		</thead>
-		<% @cars.each do |car| %>
-			<tr>
-				<td><%= car.brand %></td>
-				<td><%= car.name%></td>
-				<td><%= car.year%></td>
-				<td><%= car.board %></td>
-				<td><%= car.mileage %></td>
-				<td><%= link_to "Editar", edit_type_of_car_car_path(@type_of_car, car) %></td>
-        <% if car.event_logs.present? or car.absences.present?%>
-          <td><span class="badge badge-info">Em uso</span></td>
-        <% else %>
-				  <td><%= link_to "Excluir", type_of_car_car_path(@type_of_car, car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
-        <% end %>
-			</tr>
-		<% end %>
-	</table>
+  <div class="table-responsive">
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Marca</th>
+  				<th>Nome</th>
+  				<th>Ano</th>
+  				<th>Placa</th>
+  				<th>Quilometragem</th>
+          <th>Nº</th>
+  				<th>Editar</th>
+  				<th>Excluir</th>
+  			</tr>
+  		</thead>
+  		<% @cars.each do |car| %>
+  			<tr>
+  				<td><%= car.brand %></td>
+  				<td><%= car.name%></td>
+  				<td><%= car.year%></td>
+  				<td><%= car.board %></td>
+  				<td><%= car.mileage %></td>
+          <td><%= car.number %></td>
+  				<td><%= link_to "Editar", edit_type_of_car_car_path(@type_of_car, car) %></td>
+          <% if car.event_logs.present? or car.absences.present?%>
+            <td><span class="badge badge-info">Em uso</span></td>
+          <% else %>
+  				  <td><%= link_to "Excluir", type_of_car_car_path(@type_of_car, car), method: :delete, data: {confirm: "Tem certeza?"} %></td>
+          <% end %>
+  			</tr>
+  		<% end %>
+  	</table>
+  </div>
 </div>
