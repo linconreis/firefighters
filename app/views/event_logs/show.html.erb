@@ -111,7 +111,7 @@
     <h5><strong>Viaturas envolvidos na ocorrência</strong></h5>
     <label>
     <% @event_log.cars.each do |car| %>
-        <%= car.name %> - 
+        <%= car.name %> (<%= car.number%>) - 
       <% end %>
     </label>
   </div>

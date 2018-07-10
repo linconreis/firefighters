@@ -56,7 +56,7 @@
   <div class="col-sm-8">
     <h4>Veículos envolvidos</h4>
       <% @absence.cars.each do |car| %>
-        <%= car.name %> - 
+        <%= car.name %> (<%= car.number%>) - 
       <% end %>
   </div>
   <div class="col-sm-2"></div>
