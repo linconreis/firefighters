@@ -92,7 +92,7 @@ class EventLogsController < ApplicationController
   private
 
   def event_log_params
-    params.require(:event_log).permit(:date, :exit_time, :return_time, :requester, :phone, :descriptive_memorial, :measures_taken, :comments, :climate_conditions, :finished)
+    params.require(:event_log).permit(:date, :exit_time, :return_time, :requester, :phone, :descriptive_memorial, :measures_taken, :comments, :climate_conditions, :finished, :number)
   end
 
 end

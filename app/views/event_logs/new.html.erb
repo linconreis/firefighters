@@ -102,10 +102,15 @@
 
     <div class="row">
       <div class="col-sm-2"></div>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <div class="form-group">
           <%= collection_select(:address, :id, @adresses, :id, :name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm" }) %>
+          </div>
         </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <%= f.number_field :number, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
+          </div>
         </div>
       <div class="col-sm-2"></div>
     </div>
