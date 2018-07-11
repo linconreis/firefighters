@@ -24,7 +24,7 @@
             <td><strong>T. de Ocorrência</strong></td>
             <td><%= @event_log.occurrence_type.name %></td>
             <td><strong>Aprovada?</strong></td>
-            <% if @event_log.finished = true %>
+            <% if @event_log.finished == true %>
               <td>Finalizada</td>
               <% else %>
               <td>Pendente</td>
