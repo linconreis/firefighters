@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   post 'change_password', to: 'auth#redefine'
 
+  patch 'reset/:id', to: 'firefighters#reset_password'
+
   
   #ROTAS CRUD
   resources :firefighters 

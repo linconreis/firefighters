@@ -49,6 +49,18 @@ class FirefightersController < ApplicationController
 		flash[:success] = "Excluído com sucesso"		
 	end
 
+  def reset_password
+    @firefighter = Firefighter.find(params[:id])
+    @firefighter.password = Digest::SHA256.hexdigest "12345"
+      if @firefighter.save
+        redirect_to controller: "firefighters"
+        flash[:success] = "Senha resetada com sucesso!"
+      else
+        render :edit
+        flash[:danger] = "Opss! Algo deu errado"
+      end
+  end
+
 
 	private
 
