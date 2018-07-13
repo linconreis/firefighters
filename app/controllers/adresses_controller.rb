@@ -12,9 +12,9 @@ class AdressesController < ApplicationController
   end
 
   def create
-  	district = District.find(params[:district_id])
+  	@district = District.find(params[:district_id])
   	@address = Address.new(address_params)
-  	@address.district = district
+  	@address.district = @district
 
   	if @address.save
   		redirect_to controller: "adresses"
@@ -27,11 +27,13 @@ class AdressesController < ApplicationController
 
   def edit
   	@address = Address.find(params[:id])
+    @district = District.find(params[:district_id])
   end
 
   def update
   	@address = Address.find(params[:id])
-
+    @district = District.find(params[:district_id])
+    
     if @address.update(address_params)
       redirect_to controller: "adresses"
       flash[:success] = "Atualizado com sucesso"
