@@ -67,9 +67,9 @@
 			</div>
 			<div class="col-sm-2">
 				<div class="form-group">
-					<%= label_tag "Tipo Sanguíneo" %>
-					<%= f.text_field :type_blood, class: " form-control form-control-sm" %>
-				</div>
+         <%= label_tag "Tipo Sanguíneo" %>
+         <%= f.select :type_blood, [['A+'], ['A-'], ['B+'], ['B-'], ['AB+'], ['AB+'], ['AB-'], ['O+'],['O-']], {:include_blank => 'Tipo sanguíneo'}, { :multiple => false, :class => "form-control form-control-sm" } %>
+        </div>
 			</div>
 		<div class="col-sm-2"></div>
 	</div>
