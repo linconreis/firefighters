@@ -11,9 +11,9 @@ class CarsController < ApplicationController
 	end
 
 	def create
-		type_of_car = TypeOfCar.find(params[:type_of_car_id])
+		@type_of_car = TypeOfCar.find(params[:type_of_car_id])
 		@car = Car.new(car_params)
-		@car.type_of_car = type_of_car
+		@car.type_of_car = @type_of_car
 
 		if @car.save
 			redirect_to controller: "cars"

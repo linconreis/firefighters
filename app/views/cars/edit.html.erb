@@ -4,7 +4,7 @@
 			<strong>Opss! Alguns erros foram encontrados</strong><br>
 			<% @car.errors.messages.values.each do |value| %>
 				<% value.each do |message| %>
-					<%= message %>
+					<%= message %><br>
 				<% end %>
 			<% end %>
 		</div>
