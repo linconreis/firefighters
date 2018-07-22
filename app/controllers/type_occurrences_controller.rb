@@ -25,9 +25,9 @@ class TypeOccurrencesController < ApplicationController
   end
 
   def update
-    @type_occurrences = OccurrenceType.find(params[:id])
+    @type_occurrence = OccurrenceType.find(params[:id])
 
-    if @type_occurrences.update(type_occurrence_params)
+    if @type_occurrence.update(type_occurrence_params)
       redirect_to controller: "type_occurrences"
       flash[:success] = "Atualizado com sucesso"
     else

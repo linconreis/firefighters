@@ -5,7 +5,7 @@
       <strong>Opss! Alguns erros foram encontrados</strong><br>
       <% @type_occurrence.errors.values.each do |value| %>
         <% value.each do |message| %>
-          <%= message %>
+          <%= message %><br>
         <% end %>
       <% end %>
     </div>
