@@ -1,62 +1,62 @@
 <%= form_for @pluviometer, url: {controller: "pluviometers", action: "create"} do |f| %>
 
 
-	<% if @pluviometer.errors.any? %>
-		<div class="alert alert-danger" role="alert">
-			<strong>Opss! Alguns erros foram encontrados</strong><br>
-			<% @pluviometer.errors.values.each do |value| %>
-				<% value.each do |message| %>
-					<%= message %>
-				<% end %>
-			<% end %>
-		</div>
-	<% end %>
-	<div class="row">
-	  	<div class="card-body">
-	   		<h1 class="text-center">Novo Índice Pluviométrico</h1>
-	  	</div>
-	</div>
-	<hr><br>
+  <% if @pluviometer.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <strong>Opss! Alguns erros foram encontrados</strong><br>
+      <% @pluviometer.errors.values.each do |value| %>
+        <% value.each do |message| %>
+          <%= message %><br>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="row">
+      <div class="card-body">
+        <h1 class="text-center">Novo Índice Pluviométrico</h1>
+      </div>
+  </div>
+  <hr><br>
 
 
 
-	<div class="row">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-2">
-			<div class="form-group">
-				<%= label_tag "Data do Evento" %>
-				<%= f.date_field :date, class: "form-control form-control-sm" %>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="form-group">
-				<%= label_tag "Chuva nas últimas 24 horas" %>
-				<%= f.number_field :last_twenty_four, class: "form-control form-control-sm" %>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="form-group">
-				<%= label_tag "Chuva nas últimas 48 horas" %>
-				<%= f.number_field :last_forty_eight, class: "form-control form-control-sm" %>
-			</div>
-		</div>
-		<div class="col-sm-2"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-			<div class="form-group">
-				<%= label_tag "Observações" %>
-				<%= f.text_area :note, class: "form-control form-control-sm" %>
-			</div>
-			<div class="form-group">
-				<%= f.submit "Cadastrar", class: "btn btn-default" %>
-				<%= link_to "Voltar", {controller: "pluviometers", action: "index"} %>
-			</div>
-		</div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <%= label_tag "Data do Evento" %>
+        <%= f.date_field :date, class: "form-control form-control-sm" %>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <%= label_tag "Chuva nas últimas 24 horas" %>
+        <%= f.number_field :last_twenty_four, class: "form-control form-control-sm" %>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <%= label_tag "Chuva nas últimas 48 horas" %>
+        <%= f.number_field :last_forty_eight, class: "form-control form-control-sm" %>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="form-group">
+        <%= label_tag "Observações" %>
+        <%= f.text_area :note, class: "form-control form-control-sm" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Cadastrar", class: "btn btn-default" %>
+        <%= link_to "Voltar", {controller: "pluviometers", action: "index"} %>
+      </div>
+    </div>
 
-		<div class="col-sm-2"></div>
-	</div>
+    <div class="col-sm-2"></div>
+  </div>
 
 <% end %>
 

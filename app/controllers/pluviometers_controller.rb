@@ -35,7 +35,7 @@ class PluviometersController < ApplicationController
 			flash[:success] = "Atualizado com sucesso"
 		else
 			render :edit
-			flash[:danger] = "Atualizado com sucesso"
+			flash[:danger] = "Opss! Algo deu errado"
 			
 		end
 	end
