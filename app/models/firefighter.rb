@@ -18,8 +18,8 @@ validates_presence_of :type_blood, message: 'O campo tipo sanguíneo não pode s
 validates_presence_of :email, message: 'O campo email não pode ser deixado em branco'
 
 
-validates_uniqueness_of :registration, message: 'Matricula já cadastrada'
-validates_uniqueness_of :email, message: 'E-mail já cadastrado'
+validates_uniqueness_of :registration, :case_sensitive => false, message: 'Matricula já cadastrada'
+validates_uniqueness_of :email, :case_sensitive => false, message: 'E-mail já cadastrado'
 
 
 private 

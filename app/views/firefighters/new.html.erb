@@ -4,8 +4,8 @@
 		<div class="alert alert-danger" role="alert">
 			<strong>Opss! Alguns erros foram encontrados</strong><br>
 			<% @firefighter.errors.messages.values.each do |value| %>
-				<% value.each do |message| %><br>
-					<%= message %>
+				<% value.each do |message| %>
+					<%= message %> <br>
 				<% end %>
 			<% end %>
 		</div>
