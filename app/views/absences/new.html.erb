@@ -3,9 +3,9 @@
   <% if @absence.errors.any? %>
     <div class="alert alert-danger" role= "alert">
       <strong>Opss! Alguns erros foram encontrados</strong><br>
-      <% @absence.errors.messages.valueseach do |value| %>
-        <% value.each do |message| %><br>
-          <%= message %>
+      <% @absence.errors.messages.values.each do |value| %>
+        <% value.each do |message| %>
+          <%= message %><br>
         <% end %>
       <% end %>
     </div>

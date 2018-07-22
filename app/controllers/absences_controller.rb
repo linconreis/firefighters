@@ -39,11 +39,11 @@ class AbsencesController < ApplicationController
 	def update
     @absence = Absence.find(params[:id])
 
-    firefighters = Firefighter.where id: params[:firefighters]
-    cars = Car.where id: params[:cars]
+    @firefighters = Firefighter.where id: params[:firefighters]
+    @cars = Car.where id: params[:cars]
 
-    @absence.firefighters = firefighters
-    @absence.cars = cars
+    @absence.firefighters = @firefighters if @firefighters.present?
+    @absence.cars = @cars if @cars.present?
     
     if @absence.update(absence_params)
       redirect_to controller: "absences"
