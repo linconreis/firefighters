@@ -4,7 +4,7 @@
       <strong>Opss! Alguns erros foram encontrados</strong><br>
       <% @event_log.errors.messages.values.each do |value| %>
         <% value.each do |message| %>
-          <%= message %>
+          <%= message %><br>
         <% end %>
       <% end %>
     </div>
@@ -104,7 +104,7 @@
       <div class="col-sm-2"></div>
         <div class="col-sm-6">
           <div class="form-group">
-          <%= collection_select(:address, :id, @adresses, :id, :name_with_district_name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm" }) %>
+          <%= collection_select(:event_log, :address, @adresses, :id, :name_with_district_name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm" }) %>
           </div>
         </div>
         <div class="col-sm-2">

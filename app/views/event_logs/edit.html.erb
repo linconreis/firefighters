@@ -104,7 +104,7 @@
       <div class="col-sm-2"></div>
         <div class="col-sm-6">
           <div class="form-group">
-          <%= collection_select(:address, :id, @adresses, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm"   }) %>
+          <%= collection_select(:event_log, :address, Address.order(:name).all, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm"   }) %>
           </div>
         </div>
         <div class="col-sm-2">
@@ -127,7 +127,7 @@
       <div class="col-sm-8">
         <div class="form-group">
           <div class="row">
-            <% @firefighters.in_groups_of(3, false) do |firefighters| %>
+            <% Firefighter.order(:name).all.in_groups_of(3, false) do |firefighters| %>
                 <% for firefighter in firefighters %>
                   <div class="col-sm-4">
                     <label>
@@ -154,7 +154,7 @@
       <div class="col-sm-8">
         <div class="form-group">
           <div class="row">
-            <% @cars.in_groups_of(3, false) do |cars| %>
+            <% Car.order(:name).all.in_groups_of(3, false) do |cars| %>
                 <% for car in cars %>
                   <div class="col-sm-4">
                     <label>

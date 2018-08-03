@@ -25,16 +25,12 @@ class EventLogsController < ApplicationController
     firefighters = Firefighter.where id: params[:firefighters]
     cars = Car.where id: params[:cars]
     @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
-
-    address = Address.find(params[:address][:id])
- 
+    
     @event_log = EventLog.new(event_log_params)
-
+    @event_log.address = Address.find(params[:event_log][:address]) if params[:event_log][:address].present?
     @event_log.firefighters = firefighters
     @event_log.cars = cars
-    @event_log.address = address 
     @event_log.occurrence_type = @type_occurrence
-
 
     if @event_log.save
       redirect_to controller: "event_logs"
@@ -54,23 +50,18 @@ class EventLogsController < ApplicationController
 
   def edit
     @event_log = EventLog.find(params[:id])
-    @firefighters = Firefighter.order(:name).all
-    @cars = Car.order(:name).all
-    @adresses = Address.order(:name).all
   end
 
   def update
-    firefighters = Firefighter.where id: params[:firefighters]
-    cars = Car.where id: params[:cars]
+    @firefighters = Firefighter.where id: params[:firefighters]
+    @cars = Car.where id: params[:cars]
     @type_occurrence = OccurrenceType.find(params[:type_occurrence_id])
-
-    address = Address.find(params[:address][:id])
- 
+     
     @event_log = EventLog.find(params[:id])
 
-    @event_log.firefighters = firefighters
-    @event_log.cars = cars
-    @event_log.address = address 
+    @event_log.firefighters = @firefighters
+    @event_log.cars = @cars
+    @event_log.address = Address.find(params[:event_log][:address]) if params[:event_log][:address].present?
     @event_log.occurrence_type = @type_occurrence
 
     if @event_log.update(event_log_params)
