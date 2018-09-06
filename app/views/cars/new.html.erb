@@ -23,15 +23,15 @@
 		<div class="col-sm-8">
 			<div class="form-group">
 				<%= label_tag "Marca da viatura" %>
-				<%= f.text_field :brand, class: "form-control form-control-sm" %>
+				<%= f.text_field :brand, :required => true, placeholder: "Chevrolet - Fiat...", class: "form-control form-control-sm" %>
 			</div>
 			<div class="form-group">
 				<%= label_tag "Nome da viatura" %>
-				<%= f.text_field :name, class: "form-control form-control-sm" %>
+				<%= f.text_field :name, :required => true, placeholder: "Uno - Celta...", class: "form-control form-control-sm" %>
 			</div>
 			<div class="form-group">
 				<%= label_tag "Placa" %>
-				<%= f.text_field :board, class: "form-control form-control-sm" %>
+				<%= f.text_field :board,:required => true, placeholder: "xxx1234", class: "form-control form-control-sm" %>
 			</div>
 		</div>
 		<div class="col-sm-2"></div>
@@ -41,7 +41,7 @@
     <div class="col-sm-3">
       <div class="form-group">
         <%= label_tag "Ano da viatura" %>
-        <%= f.number_field :year, class: "form-control form-control-sm" %>
+        <%= f.number_field :year, :required => true, placeholder: "1990", class: "form-control form-control-sm" %>
       </div>
       <%= f.submit "Cadastrar", class: "btn btn-default" %>
       <%= link_to "Voltar", {controller: "cars", action: "index"}, class: "btn btn-link" %>
@@ -49,13 +49,13 @@
     <div class="col-sm-3">
       <div class="form-group">
         <%= label_tag "Quilometragem" %>
-        <%= f.number_field :mileage, class: "form-control form-control-sm" %>
+        <%= f.number_field :mileage, :required => true, placeholder: "150000", class: "form-control form-control-sm" %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="form-group">
         <%= label_tag "Número" %>
-        <%= f.number_field :number, class: "form-control form-control-sm" %>
+        <%= f.number_field :number, :required => true, placeholder: "05", class: "form-control form-control-sm" %>
       </div>
     </div>
     <div class="col-sm-2"></div>

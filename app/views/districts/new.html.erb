@@ -24,7 +24,7 @@
 			<div class="col-sm-8">
 				<div class="form-group">
 					<%= label_tag "Nome do bairro" %>
-					<%= f.text_field :name, class: "form-control form-control-sm" %>
+					<%= f.text_field :name, :required => true, placeholder: "Centro", class: "form-control form-control-sm" %>
 				</div>
 
 				<%= f.submit "Cadastrar", class: "btn btn-default"  %>

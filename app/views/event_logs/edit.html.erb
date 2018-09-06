@@ -22,19 +22,19 @@
       <div class="col-sm-2">
         <div class="form-group">
           <%= label_tag "Data" %>
-          <%= f.date_field :date, class: "form-control form-control-sm" %>
+          <%= f.date_field :date, :required => true, class: "form-control form-control-sm" %>
         </div>
       </div>
         <div class="col-sm-3">
           <div class="form-group">
             <%= label_tag "Horário de saída" %>
-            <%= f.time_field :exit_time, class: "form-control form-control-sm" %>
+            <%= f.time_field :exit_time, :required => true,  class: "form-control form-control-sm" %>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="form-group">
             <%= label_tag "Horário de retorno" %>
-            <%= f.time_field :return_time, class: "form-control form-control-sm" %>
+            <%= f.time_field :return_time, :required => true, class: "form-control form-control-sm" %>
           </div>
         </div>
     <div class="col-sm-2"></div>
@@ -45,13 +45,13 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Solicitante" %>
-          <%= f.text_field :requester, class: "form-control form-control-sm" %>
+          <%= f.text_field :requester, :required => true, placeholder: "Nome vitima principal", class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Telefone" %>
-          <%= f.number_field :phone, class: "form-control form-control-sm" %>
+          <%= f.number_field :phone, :required => true, placeholder: "54988776655", class: "form-control form-control-sm" %>
           </div>
       </div>
       <div class="col-sm-2"></div>
@@ -62,7 +62,7 @@
         <div class="col-sm-8">
             <div class="form-group">
               <%= label_tag "Memorial descritivo" %>
-              <%= f.text_area :descriptive_memorial, class: "form-control form-control-sm" %>
+              <%= f.text_area :descriptive_memorial, :required => true, placeholder: "Chegando no local foi constado que...", class: "form-control form-control-sm" %>
             </div>
         </div>
       <div class="col-sm-2"></div>
@@ -73,7 +73,7 @@
         <div class="col-sm-8">
            <div class="form-group">
             <%= label_tag "Providências tomadas" %>
-            <%= f.text_area :measures_taken, class: "form-control form-control-sm" %>
+            <%= f.text_area :measures_taken, :required => true, placeholder: "Foram tomadas as segiuntes providências", class: "form-control form-control-sm" %>
           </div>
         </div>
       <div class="col-sm-2"></div>
@@ -84,12 +84,12 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Obeservações" %>
-          <%= f.text_area :comments, class: "form-control form-control-sm" %>
+          <%= f.text_area :comments, placeholder: "Veículo sem documentação", class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-4">
         <%= label_tag "Condições climáticas" %>
-        <%= f.text_area :climate_conditions, class: "form-control form-control-sm" %>
+        <%= f.text_area :climate_conditions, :required => true, placeholder: "Nublado com muito vento", class: "form-control form-control-sm" %>
       </div>
       <div class="col-sm-2"></div>
     </div>
@@ -104,12 +104,12 @@
       <div class="col-sm-2"></div>
         <div class="col-sm-6">
           <div class="form-group">
-          <%= collection_select(:event_log, :address, Address.order(:name).all, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false, :class => "form-control form-control-sm"   }) %>
+          <%= collection_select(:event_log, :address, Address.order(:name).all, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false,  :required => true, :class => "form-control form-control-sm"   }) %>
           </div>
         </div>
         <div class="col-sm-2">
           <div class="form-group">
-            <%= f.number_field :number, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
+            <%= f.number_field :number, :required => true, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
           </div>
         </div>
       <div class="col-sm-2"></div>

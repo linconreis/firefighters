@@ -24,13 +24,13 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Nome" %>
-          <%= f.text_field :name, class: "form-control form-control-sm" %>
+          <%= f.text_field :name, :required => true, placeholder: "Nome", class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Sobrenome" %>
-          <%= f.text_field :last_name, class: "form-control form-control-sm" %>
+          <%= f.text_field :last_name, :required => true, placeholder: "Sobrenome", class: "form-control form-control-sm" %>
         </div>
       </div>
     <div class="col-sm-2"></div>
@@ -40,13 +40,13 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Telefone" %>
-          <%= f.number_field :phone, class: " form-control form-control-sm" %>
+          <%= f.number_field :phone, :required => true, placeholder: "54988776655", class: " form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "E-mail" %>
-          <%= f.email_field :email, class: "form-control form-control-sm" %>
+          <%= f.email_field :email,:required => true, placeholder: "nome@provedor.com.br", class: "form-control form-control-sm" %>
         </div>
       </div>
     <div class="col-sm-2"></div>
@@ -56,19 +56,19 @@
       <div class="col-sm-3">
         <div class="form-group">
           <%= label_tag "Código de Matricula" %>
-          <%= f.text_field :registration, class: "form-control form-control-sm" %>
+          <%= f.text_field :registration, :required => true, placeholder: "11223344", class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="form-group">
           <%= label_tag "Data de Nascimento" %>
-          <%= f.date_field :birth_date, class: " form-control form-control-sm" %>
+          <%= f.date_field :birth_date, :required => true, class: " form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-2">
         <div class="form-group">
          <%= label_tag "Tipo Sanguíneo" %>
-         <%= f.select :type_blood, [['A+'], ['A-'], ['B+'], ['B-'], ['AB+'], ['AB+'], ['AB-'], ['O+'],['O-']], {:include_blank => 'Tipo sanguíneo'}, { :multiple => false, :class => "form-control form-control-sm" } %>
+         <%= f.select :type_blood, [['A+'], ['A-'], ['B+'], ['B-'], ['AB+'], ['AB+'], ['AB-'], ['O+'],['O-']], {:include_blank => 'Tipo sanguíneo'}, { :multiple => false, :required => true, :class => "form-control form-control-sm" } %>
         </div>
       </div>
     <div class="col-sm-2"></div>
