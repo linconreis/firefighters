@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   patch 'reset/:id', to: 'firefighters#reset_password'
 
+  get 'institutional', to: 'welcome#institutional'
+
   
   #ROTAS CRUD
   resources :firefighters 
