@@ -18,27 +18,56 @@
   <hr><br>
 
   <div class="row">
+    <div class="card-body">
+      <h4 class="text-center">Informe o endereço da ocorrência</h4>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-sm-2"></div>
-      <div class="col-sm-2">
+      <div class="col-sm-6">
         <div class="form-group">
-          <%= label_tag "Data" %>
-          <%= f.date_field :date, :required => true, class: "form-control form-control-sm" %>
+          <%= collection_select(:event_log, :address, @adresses, :id, :name_with_district_name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :required => true, :class => "form-control form-control-sm" }) %>
         </div>
       </div>
-        <div class="col-sm-3">
-          <div class="form-group">
-            <%= label_tag "Horário de saída" %>
-            <%= f.time_field :exit_time, :required => true, class: "form-control form-control-sm" %>
-          </div>
+      <div class="col-sm-2">
+        <div class="form-group">
+            <%= f.number_field :number, :required => true, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
         </div>
-        <div class="col-sm-3">
-          <div class="form-group">
-            <%= label_tag "Horário de retorno" %>
-            <%= f.time_field :return_time, :required => true, class: "form-control form-control-sm" %>
-          </div>
-        </div>
+        <%= link_to "*Cadastrar endereço", controller: "districts", action:"index" %>
+      </div>
     <div class="col-sm-2"></div>
   </div>
+
+
+    <div class="row">
+      <div class="card-body">
+        <h4 class="text-center">Digite os dados da ocorrência</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <%= label_tag "Data" %>
+            <%= f.date_field :date, :required => true, class: "form-control form-control-sm" %>
+          </div>
+        </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <%= label_tag "Horário de saída" %>
+              <%= f.time_field :exit_time, :required => true, class: "form-control form-control-sm" %>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <%= label_tag "Horário de retorno" %>
+              <%= f.time_field :return_time, :required => true, class: "form-control form-control-sm" %>
+            </div>
+          </div>
+      <div class="col-sm-2"></div>
+    </div>
 
   <div class="row">
     <div class="col-sm-2"></div>
@@ -54,8 +83,8 @@
           <%= f.number_field :phone,:required => true, placeholder: "54988776655", class: "form-control form-control-sm" %>
           </div>
       </div>
-      <div class="col-sm-2"></div>
-    </div>
+    <div class="col-sm-2"></div>
+  </div>
 
     <div class="row">
       <div class="col-sm-2"></div>
@@ -93,28 +122,6 @@
       </div>
       <div class="col-sm-2"></div>
     </div>
-
-    <div class="row">
-      <div class="card-body">
-        <h4 class="text-center">Digite o endereço da ocorrência</h4>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-2"></div>
-        <div class="col-sm-6">
-          <div class="form-group">
-          <%= collection_select(:event_log, :address, @adresses, :id, :name_with_district_name, {:include_blank => 'Selecione o endereço'}, { :multiple => false, :required => true, :class => "form-control form-control-sm" }) %>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="form-group">
-            <%= f.number_field :number, :required => true, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
-          </div>
-        </div>
-      <div class="col-sm-2"></div>
-    </div>
-
 
     <div class="row">
       <div class="card-body">
@@ -174,22 +181,11 @@
   <div class="row">
     <div class="col-sm-2"></div>
       <div class="col-sm-8">
-        <div class="form-check">
-          <%= label_tag "Ocorrência aprovada?" %>
-        </div>
-        <div class="form-check form-check-inline">
-          Sim
-          <%= f.radio_button :finished, true, class: "form-inline" %>
-        </div>
-        <div class="form-check form-check-inline">
-          Não
-          <%= f.radio_button :finished, false, class: "form-inline" %>
-        </div><br><br>
         <div class="form-group">
             <%= f.submit "Cadastrar", class: "btn btn-default" %>
             <%= link_to "Voltar", {controller: "type_occurrences", action: "index"}, class: "btn btn-link" %>
           </div>
-      </div>
+        </div>
     <div class="col-sm-2"></div>
   </div>
 
