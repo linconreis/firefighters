@@ -8,7 +8,7 @@ class EventLogsController < ApplicationController
   end
 
   def index_all
-    @event_logs = EventLog.order(date: :desc).all
+    @event_logs = EventLog.order(date: :desc).where("finished = 'true'")
   end
 
   def new
