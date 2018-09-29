@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="card-body">
+      <h1 class="text-center">Relatório do dia <%= format_date(@start_date.to_date) %> até <%= format_date(@end_date.to_date) %></h1>
+    </div>
+</div>
+<hr><br>
+
+  <% for event_log in @event_logs %>
+    <% total_events = total_events.to_i + 1 %>
+  <% end %>
+
+
+<div class="row">
+  <div class="col-sm-2"></div>  
+    <div class="col-sm-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tipo de Ocorrência</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <thead>
+          <% @event_log_groups.collect { |event_log, count| %>
+            <tr>
+              <td><%= event_log.name %></td>
+              <td> <%= count %></td>
+            </tr>
+          <% } %>
+          <th>TOTAL DE OCORRÊNCIAS NO PERÍODO<th><%= total_events %></td></td>
+        </thead>
+      </table>
+    </div> 
+  <div class="col-sm-2"></div> 
+</div>
+
+<div class="row">
+    <div class="card-body">
+      <h4 class="text-center">Listas das Ocorrências</h4>
+    </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Solicitante</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Ver detalhes</th>
+          </tr>
+        </thead>
+        <thead>
+        <% @event_logs.each do |event_log| %>
+            <tr>
+              <td><%= format_date(event_log.date) %></td>
+              <td><%= event_log.requester %></td>
+              <td><%= event_log.phone %></td>
+              <td><%= event_log.address.name %></td>
+              <td> <%= link_to "Ver detalhes", type_occurrence_event_log_path(event_log.occurrence_type, event_log) %>
+                <!-- <a href="/type_occurrences/<%= event_log.occurrence_type.id %>/event_logs/<%= event_log.id %>">dsdsd</a>-->
+              </td>
+            </tr>
+          <% end %>
+        </thead>
+      </table>
+    </div>
+  <div class="col-sm-2"></div>
+</div>

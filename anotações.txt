@@ -70,3 +70,11 @@ rails g migration CreateJoinTableFirefighterEventLog firefighter event_log
 Controller com duas palavras 
 rails g controller typeOcurrences
 
+
+Hash - Map
+ <ul>
+    <% @event_log_groups.collect { |event_log, count| %>
+      <li><%= event_log.name %> - <%= count %></li>
+    <% } %>
+  </ul>
+

@@ -18,6 +18,10 @@ Rails.application.routes.draw do
 
   get 'institutional', to: 'welcome#institutional'
 
+  get 'reports_index', to: 'reports#index'
+
+  get 'reports_result', to: 'reports#result'
+
   
   #ROTAS CRUD
   resources :firefighters 
