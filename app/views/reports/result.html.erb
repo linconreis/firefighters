@@ -42,32 +42,40 @@
 <br>
 
 <div class="row">
-  <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Data</th>
-            <th>Solicitante</th>
-            <th>Telefone</th>
-            <th>Endereço</th>
-            <th>Ver detalhes</th>
-          </tr>
-        </thead>
-        <thead>
-        <% @event_logs.each do |event_log| %>
+  <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
             <tr>
-              <td><%= format_date(event_log.date) %></td>
-              <td><%= event_log.requester %></td>
-              <td><%= event_log.phone %></td>
-              <td><%= event_log.address.name %></td>
-              <td> <%= link_to "Ver detalhes", type_occurrence_event_log_path(event_log.occurrence_type, event_log) %>
-                <!-- <a href="/type_occurrences/<%= event_log.occurrence_type.id %>/event_logs/<%= event_log.id %>">dsdsd</a>-->
-              </td>
+              <th>Data</th>
+              <th>Solicitante</th>
+              <th>Telefone</th>
+              <th>Endereço</th>
+              <th>Ver detalhes</th>
+              <th>Status</th>
             </tr>
-          <% end %>
-        </thead>
-      </table>
+          </thead>
+          <thead>
+          <% @event_logs.each do |event_log| %>
+              <tr>
+                <td><%= format_date(event_log.date) %></td>
+                <td><%= event_log.requester %></td>
+                <td><%= event_log.phone %></td>
+                <td><%= event_log.address.name %></td>
+                <td> <%= link_to "Ver detalhes", type_occurrence_event_log_path(event_log.occurrence_type, event_log) %>
+                  <!-- <a href="/type_occurrences/<%= event_log.occurrence_type.id %>/event_logs/<%= event_log.id %>">dsdsd</a>-->
+                </td>
+                <% if event_log.finished == true %>
+                  <td>Finalizada</td>
+                <% else %>
+                  <td>Pendente</td>
+                <% end %>
+              </tr>
+            <% end %>
+          </thead>
+        </table>
+      </div>
     </div>
-  <div class="col-sm-2"></div>
+  <div class="col-sm-1"></div>
 </div>
