@@ -1,5 +1,5 @@
 class PluviometersController < ApplicationController
-before_action :authenticate
+before_action :authenticate, only: [:new, :edit, :create, :update, :destroy]
 
 	def index
     #cuidar os pontos na ordenacao de data - decrescente desc - crescente asc

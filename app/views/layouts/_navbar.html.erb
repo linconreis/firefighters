@@ -6,13 +6,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/pluviometers">Ind. Pluviométricos</a>
+          </li>
         <% if firefighter_session? %>
         <% firefighter = get_firefighter_session %>
           <li class=" nav-item">
             <a class="nav-link" href="/districts">Bairros e Ruas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pluviometers">Ind. Pluviométricos</a>
           </li>
             <% if firefighter.commandant == true  %>
               <li class="nav-item">

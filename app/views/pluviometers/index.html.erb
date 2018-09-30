@@ -5,11 +5,13 @@
 </div>
 <hr><br>
 
-<div class="row">
-	<div class="col-sm-12">
-		<%= link_to "Novo Ind. Pluviométrico", {controller: "pluviometers", action: "new"}, class: "btn btn-default" %>
-	</div>
-</div><br>
+<% if firefighter_session? %>
+  <div class="row">
+  	<div class="col-sm-12">
+  		<%= link_to "Novo Ind. Pluviométrico", {controller: "pluviometers", action: "new"}, class: "btn btn-default" %>
+  	</div>
+  </div><br>
+<% end %>
 
 <div class="row">
 	<div class="table-responsive"> 
@@ -21,8 +23,10 @@
 					<th>Chuva nas últimas 24hrs</th>
 					<th>Chuva nas últimas 48hrs</th>
 					<th>Observações</th>
-					<th>Editar</th>
-					<th>Excluir</th>
+					<% if firefighter_session? %>
+            <th>Editar</th>
+					  <th>Excluir</th>
+          <% end %>
 				</tr>
 			</thead>
 			<% @pluviometers.each do |pluviometer| %>
@@ -36,8 +40,10 @@
 					<% else %>
 						<td>Nenhuma observação</td>
 					<% end %>
-					<td><%= link_to "Editar", edit_pluviometer_path(pluviometer) %></td>
-					<td><%= link_to "Excluir", pluviometer_path(pluviometer), method: :delete, data: { confirm: "Tem certeza?" } %></td>
+          <% if firefighter_session? %>
+					   <td><%= link_to "Editar", edit_pluviometer_path(pluviometer) %></td>
+					   <td><%= link_to "Excluir", pluviometer_path(pluviometer), method: :delete, data: { confirm: "Tem certeza?" } %></td>
+          <% end %>
 				</tr>
 			<% end %>
 		</table>
