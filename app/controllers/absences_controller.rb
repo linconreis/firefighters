@@ -1,6 +1,6 @@
 class AbsencesController < ApplicationController
   before_action :authenticate
-  before_action :authenticate_commandant, only: [:edit, :destroy]
+  before_action :authenticate_commandant, only: [:edit, :update, :destroy]
 
 	def index
 		@absences = Absence.order(date_out: :desc).all
