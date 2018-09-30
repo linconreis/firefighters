@@ -12,14 +12,14 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag :date, 'Data inicial' %><br>
-          <%= date_field :event_log, :start_date, class: "form-control form-control-sm" %>
+          <%= date_field :event_log, :start_date, :required => true, class: "form-control form-control-sm" %>
         </div>
         <%= submit_tag("Gerar Relatório", class: "btn btn-default") %>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag :date, 'Data final' %><br>
-          <%= date_field :event_log, :end_date, class: "form-control form-control-sm" %>
+          <%= date_field :event_log, :end_date, :required => true, class: "form-control form-control-sm" %>
         </div>
       </div>
     <div class="col-sm-2"></div>
