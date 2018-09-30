@@ -1,6 +1,7 @@
 class FirefightersController < ApplicationController
 	require "digest"
-
+  before_action :authenticate_commandant
+  
 	def index
 		@firefighters = Firefighter.order(:name).all
 	end

@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-
+  before_action :authenticate
   def index
   
   end

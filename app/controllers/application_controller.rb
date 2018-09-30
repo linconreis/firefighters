@@ -28,4 +28,25 @@ class ApplicationController < ActionController::Base
   	session[:current_firefighter_registration] = nil
   end
 
+  def authenticate
+    unless firefighter_session?
+      redirect_to controller: "welcome"
+      flash[:info] = "Você não tem permissão"
+    end
+  end
+
+  def authenticate_commandant
+    if firefighter_session?
+      firefighter = get_firefighter_session
+        if firefighter.commandant == false
+          redirect_to controller: "welcome"
+          flash[:info] = "Você não tem permissão"
+        end
+    else
+      redirect_to controller: "welcome"
+      flash[:info] = "Você não tem permissão"
+    end   
+  end
+
+
 end

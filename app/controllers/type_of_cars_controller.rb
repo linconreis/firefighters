@@ -1,4 +1,5 @@
 class TypeOfCarsController < ApplicationController
+  before_action :authenticate_commandant
 
 	def index
 		@type_of_cars = TypeOfCar.order(:name).all

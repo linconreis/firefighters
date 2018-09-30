@@ -1,4 +1,5 @@
 class DistrictsController < ApplicationController
+before_action :authenticate
 
 	def index
 		 @districts = District.order(:name).all

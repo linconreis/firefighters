@@ -1,4 +1,6 @@
 class EventLogsController < ApplicationController
+  before_action :authenticate
+  before_action :authenticate_commandant, only: [:edit, :destroy]
 
   def index
     #@event_logs = EventLog.order(:date).all

@@ -4,50 +4,55 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class=" nav-item">
-        <a class="nav-link" href="/districts">Bairros e Ruas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/pluviometers">Ind. Pluviométricos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/firefighters">Corporação</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/type_of_cars">Viaturas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/absences">Ausências</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/type_occurrences">Ocorrências</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/all_occurrences">Consulta de ocorrências</a>
-      </li><li class="nav-item">
-        <a class="nav-link" href="/reports_index">Relatórios</a>
-      </li>
-      </li><li class="nav-item">
-        <a class="nav-link" href="/institutional">Institucional</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav text-right">
-      <% if firefighter_session? %>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= get_firefighter_session.name %>              
-            </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/logout">Sair</a>
-              </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <% if firefighter_session? %>
+        <% firefighter = get_firefighter_session %>
+          <li class=" nav-item">
+            <a class="nav-link" href="/districts">Bairros e Ruas</a>
           </li>
-      <% else %>
-          <li>
-            <a class="nav-link" href="/login">Login</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/pluviometers">Ind. Pluviométricos</a>
           </li>
-      <% end %>
-    </ul>
-  </div>
+            <% if firefighter.commandant == true  %>
+              <li class="nav-item">
+                <a class="nav-link" href="/firefighters">Corporação</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/type_of_cars">Viaturas</a>
+              </li>
+            <% end %>
+          <li class="nav-item">
+            <a class="nav-link" href="/absences">Ausências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/type_occurrences">Ocorrências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/all_occurrences">Consulta de ocorrências</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/reports_index">Relatórios</a>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <a class="nav-link" href="/institutional">Institucional</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav text-right">
+        <% if firefighter_session? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= get_firefighter_session.name %>              
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/logout">Sair</a>
+                </div>
+            </li>
+        <% else %>
+            <li>
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+        <% end %>
+      </ul>
+    </div>
 </nav>

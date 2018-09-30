@@ -1,4 +1,5 @@
 class TypeOccurrencesController < ApplicationController
+  before_action :authenticate
 
   def index
     @type_occurrences = OccurrenceType.order(:name).all

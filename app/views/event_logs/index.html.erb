@@ -35,8 +35,15 @@
             <td><%= event_log.phone %></td>
             <td><%= event_log.address.name %></td>
             <td><%= link_to "Ver detalhes", type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
-            <td><%= link_to "Editar", edit_type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
-            <td><%= link_to "Excluir", type_occurrence_event_log_path(@type_occurrence, event_log), method: :delete, data: { confirm: "Tem certeza?" } %></td>
+            <% get_firefighter_session %>
+            <% firefighter = get_firefighter_session %>
+              <% if firefighter.commandant == true %>
+              <td><%= link_to "Editar", edit_type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
+              <td><%= link_to "Excluir", type_occurrence_event_log_path(@type_occurrence, event_log), method: :delete, data: { confirm: "Tem certeza?" } %></td>
+              <% else %>
+              <td>Editar</td>
+              <td>Excluir</td>
+              <% end %>
             <% if event_log.finished == true %>
               <td>Finalizada</td>
             <% else %>

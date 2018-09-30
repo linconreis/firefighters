@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+  before_action :authenticate_commandant
 
 	def index
 		@cars =  Car.where :type_of_car => params[:type_of_car_id]

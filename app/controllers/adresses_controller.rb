@@ -1,5 +1,6 @@
 class AdressesController < ApplicationController
-  
+before_action :authenticate
+
   def index
   	@adresses = Address.where :district => params[:district_id]
   	@district = District.find(params[:district_id])
