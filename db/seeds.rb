@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 unless Firefighter.exists?
-	Firefighter.create name: "lincon", last_name: "reis", phone: "54996583860", commandant: "true", type_blood: "o+", password: "12345", email: "lincon9891@gmail.com", registration: "101010", birth_date: "13/10/1989", renew_password: "false"
-	Firefighter.create name: "comandante", last_name: "major", phone: "5499999999", commandant: "true", type_blood: "o+", password: "12345", email: "comandante@gmail.com", registration: "151515", birth_date: "10/01/1989", renew_password: "false"
+	Firefighter.create name: "Lincon", last_name: "Reis", phone: "54996583860", commandant: "true", type_blood: "o+", password: "12345", email: "lincon9891@gmail.com", registration: "101010", birth_date: "13/10/1989", renew_password: "false"
+	Firefighter.create name: "Comandante", last_name: "Major", phone: "54999702722", commandant: "true", type_blood: "o+", password: "12345", email: "comandante@gmail.com", registration: "151515", birth_date: "10/01/1989", renew_password: "false"
 end
