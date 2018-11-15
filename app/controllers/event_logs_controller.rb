@@ -10,7 +10,8 @@ class EventLogsController < ApplicationController
   end
 
   def index_all
-    @event_logs = EventLog.order(date: :desc).all
+    #@event_logs = EventLog.order(date: :desc).all
+    @event_logs = EventLog.paginate(:page => params[:page], :per_page => 5).order(date: :desc).all
   end
 
   def new
