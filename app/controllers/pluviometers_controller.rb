@@ -3,7 +3,10 @@ before_action :authenticate, only: [:new, :edit, :create, :update, :destroy]
 
 	def index
     #cuidar os pontos na ordenacao de data - decrescente desc - crescente asc
-		@pluviometers = Pluviometer.order(date: :desc).all
+		#@pluviometers = Pluviometer.order(date: :desc).all
+
+    @pluviometers = Pluviometer.paginate(:page => params[:page], :per_page => 5).order(date: :desc).all
+
 	end
 
 	def new
