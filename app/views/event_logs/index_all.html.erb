@@ -23,7 +23,7 @@
         <tr>
           <td><%= format_date(event_log.date) %></td>
           <td><%= event_log.requester %></td>
-          <td><%= event_log.phone %></td>
+          <td><%= number_to_phone(event_log.phone, pattern: /(\d{2})(\d{5})(\d{4})$/) %></td>
           <td><%= event_log.address.name %> - N° <%= event_log.number %></td>
           <td> <%= link_to "Ver detalhes", type_occurrence_event_log_path(event_log.occurrence_type, event_log) %>
              <!-- <a href="/type_occurrences/<%= event_log.occurrence_type.id %>/event_logs/<%= event_log.id %>">dsdsd</a>-->

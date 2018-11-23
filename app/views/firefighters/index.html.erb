@@ -28,7 +28,7 @@
 				<tr>
 					<td><%= firefighter.name %></td>
 					<td><%= firefighter.last_name %></td>
-					<td><%= firefighter.phone %></td>
+					<td><%= number_to_phone(firefighter.phone, pattern: /(\d{2})(\d{5})(\d{4})$/) %></td>
 					<td><%= link_to "Visualizar", firefighter_path(firefighter) %></td>
 					<td><%= link_to "Editar", edit_firefighter_path(firefighter) %></td>
           <% if firefighter.event_logs.present? or firefighter.absences.present? or firefighter.pluviometers.present? %>

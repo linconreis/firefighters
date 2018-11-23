@@ -12,7 +12,20 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require jquery.inputmask
+//= require jquery.inputmask.extensions
+//= require jquery.inputmask.numeric.extensions
+//= require jquery.inputmask.date.extensions
+//= require_tree .
+
+$(document).ready(function () {
+  var $phone = $('.mask-phone');
+  $phone.inputmask('(99) 99999-9999');
+
+  $('form').on('submit', function () {
+    $phone.inputmask('remove');
+  });
+});

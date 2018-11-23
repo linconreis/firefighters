@@ -40,7 +40,7 @@
       <div class="col-sm-4">
         <div class="form-group">
           <%= label_tag "Telefone" %>
-          <%= f.number_field :phone, :required => true, placeholder: "54988776655", class: " form-control form-control-sm" %>
+          <%= f.text_field :phone, placeholder: "54988776655", class: "form-control form-control-sm mask-phone", :required => true %>
         </div>
       </div>
       <div class="col-sm-4">
