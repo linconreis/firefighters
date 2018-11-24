@@ -1,121 +1,129 @@
-<div class="row">
-   <div class="card-body">
-      <h1 class="text-left">Dados da ocorrência</h1>
-   </div>
-</div>
-<hr><br>
+<div id="print1">
+  <div class="row">
+     <div class="card-body">
+        <h1 class="text-left">Dados da ocorrência</h1>
+     </div>
+  </div>
+  <hr><br>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-    <div class="col-sm-10">
-      <table class="table">
-        <thead>
-          <tr>
-            <td><strong>Data</strong></td>
-            <td><%= format_date(@event_log.date) %></td>
-            <td><strong>H. de saída</strong></td>
-            <td><%= format_time(@event_log.exit_time) %></td>
-            <td><strong>H. de retorno</strong></td>
-            <td><%= format_time(@event_log.return_time) %></td>
-          </tr>
-          <tr>
-            <td><strong>Código</strong></td>
-            <td><%= @event_log.occurrence_type.code %></td>
-            <td><strong>T. de Ocorrência</strong></td>
-            <td><%= @event_log.occurrence_type.name %></td>
-            <td><strong>Status</strong></td>
-            <% if @event_log.finished == true %>
-              <td>Finalizada</td>
-              <% else %>
-              <td>Pendente</td>
-            <% end %>
-          </tr>
-          <tr>
-            <td><strong>Solicitante</strong></td>
-            <td><%= @event_log.requester %></td>
-            <td><strong>Telefone</strong></td>
-            <td><%= number_to_phone(@event_log.phone, pattern: /(\d{2})(\d{5})(\d{4})$/) %></td>
-            <td><strong>Clima</strong></td>
-            <td><%= @event_log.climate_conditions %></td>
-        </thead>
-      </table>
-    </div>
-  <div class="col-sm-1"></div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <table class="table">
+          <thead>
+            <tr>
+              <td><strong>Data</strong></td>
+              <td><%= format_date(@event_log.date) %></td>
+              <td><strong>H. de saída</strong></td>
+              <td><%= format_time(@event_log.exit_time) %></td>
+              <td><strong>H. de retorno</strong></td>
+              <td><%= format_time(@event_log.return_time) %></td>
+            </tr>
+            <tr>
+              <td><strong>Código</strong></td>
+              <td><%= @event_log.occurrence_type.code %></td>
+              <td><strong>T. de Ocorrência</strong></td>
+              <td><%= @event_log.occurrence_type.name %></td>
+              <td><strong>Status</strong></td>
+              <% if @event_log.finished == true %>
+                <td>Finalizada</td>
+                <% else %>
+                <td>Pendente</td>
+              <% end %>
+            </tr>
+            <tr>
+              <td><strong>Solicitante</strong></td>
+              <td><%= @event_log.requester %></td>
+              <td><strong>Telefone</strong></td>
+              <td><%= number_to_phone(@event_log.phone, pattern: /(\d{2})(\d{5})(\d{4})$/) %></td>
+              <td><strong>Clima</strong></td>
+              <td><%= @event_log.climate_conditions %></td>
+          </thead>
+        </table>
+      </div>
+    <div class="col-sm-1"></div>
+  </div>
 </div>
 <br>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Endereço</strong></h5>
-    <label>
-    <p><%= @event_log.address.name_with_district_name %> - <%= @event_log.number %></p>
-    </label>
+<div id="print2">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Endereço</strong></h5>
+      <label>
+      <p><%= @event_log.address.name_with_district_name %> - <%= @event_log.number %></p>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Memorial descritivo</strong></h5>
-    <label>
-    <p><%= @event_log.descriptive_memorial %></p>
-    </label>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Memorial descritivo</strong></h5>
+      <label>
+      <p><%= @event_log.descriptive_memorial %></p>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Providências tomadas</strong></h5>
-    <label>
-    <p><%= @event_log.measures_taken %></p>
-    </label>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Providências tomadas</strong></h5>
+      <label>
+      <p><%= @event_log.measures_taken %></p>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Observações</strong></h5>
-    <label>
-    <p><%= @event_log.comments %></p>
-    </label>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Observações</strong></h5>
+      <label>
+      <p><%= @event_log.comments %></p>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Bombeiros envolvidos na ocorrência</strong></h5>
-    <label>
-    <% @event_log.firefighters.each do |firefighter| %>
-        <%= firefighter.name %> <%= firefighter.last_name %> - 
-      <% end %>
-    </label>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Bombeiros envolvidos na ocorrência</strong></h5>
+      <label>
+      <% @event_log.firefighters.each do |firefighter| %>
+          <%= firefighter.name %> <%= firefighter.last_name %> - 
+        <% end %>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<hr>
+  <hr>
 
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h5><strong>Viaturas envolvidos na ocorrência</strong></h5>
-    <label>
-    <% @event_log.cars.each do |car| %>
-        <%= car.name %> (<%= car.number%>) - 
-      <% end %>
-    </label>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <h5><strong>Viaturas envolvidos na ocorrência</strong></h5>
+      <label>
+      <% @event_log.cars.each do |car| %>
+          <%= car.name %> (<%= car.number%>) - 
+        <% end %>
+      </label>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
-  <div class="col-sm-1"></div>
+  <br><br>
+<p>Bombeiros São Francisco de Paula - RS</p>
 </div>
+<p class="text-right"><button id="btn-imprimir-pedido" class="btn btn-primary">Imprimir</button></p>
 <br><br>
