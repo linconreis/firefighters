@@ -32,7 +32,7 @@
           <tr>
             <td><%= format_date(event_log.date) %></td>
             <td><%= event_log.requester %></td>
-            <td><%= event_log.phone %></td>
+            <td><%= number_to_phone(event_log.phone, pattern: /(\d{2})(\d{5})(\d{4})$/) %></td>
             <td><%= event_log.address.name %></td>
             <td><%= link_to "Ver detalhes", type_occurrence_event_log_path(@type_occurrence, event_log) %></td>
             <% get_firefighter_session %>
