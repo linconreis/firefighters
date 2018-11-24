@@ -21,19 +21,19 @@
     <div class="col-sm-2"></div>
       <div class="col-sm-2">
         <div class="form-group">
-          <%= label_tag "Data" %>
+          <%= label_tag "Data", nil, class: 'required' %>
           <%= f.date_field :date, :required => true, class: "form-control form-control-sm" %>
         </div>
       </div>
         <div class="col-sm-3">
           <div class="form-group">
-            <%= label_tag "Horário de saída" %>
+            <%= label_tag "Horário de saída", nil, class: 'required' %>
             <%= f.time_field :exit_time, :required => true,  class: "form-control form-control-sm" %>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="form-group">
-            <%= label_tag "Horário de retorno" %>
+            <%= label_tag "Horário de retorno", nil, class: 'required' %>
             <%= f.time_field :return_time, :required => true, class: "form-control form-control-sm" %>
           </div>
         </div>
@@ -44,13 +44,13 @@
     <div class="col-sm-2"></div>
       <div class="col-sm-4">
         <div class="form-group">
-          <%= label_tag "Solicitante" %>
+          <%= label_tag "Solicitante", nil, class: 'required' %>
           <%= f.text_field :requester, :required => true, placeholder: "Nome vitima principal", class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="form-group">
-          <%= label_tag "Telefone" %>
+          <%= label_tag "Telefone", nil, class: 'required' %>
           <%= f.number_field :phone, :required => true, placeholder: "54988776655", class: "form-control form-control-sm" %>
           </div>
       </div>
@@ -61,7 +61,7 @@
       <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <div class="form-group">
-              <%= label_tag "Memorial descritivo" %>
+              <%= label_tag "Memorial descritivo", nil, class: 'required' %>
               <%= f.text_area :descriptive_memorial, :required => true, placeholder: "Chegando no local foi constado que...", class: "form-control form-control-sm" %>
             </div>
         </div>
@@ -72,7 +72,7 @@
       <div class="col-sm-2"></div>
         <div class="col-sm-8">
            <div class="form-group">
-            <%= label_tag "Providências tomadas" %>
+            <%= label_tag "Providências tomadas", nil, class: 'required' %>
             <%= f.text_area :measures_taken, :required => true, placeholder: "Foram tomadas as segiuntes providências", class: "form-control form-control-sm" %>
           </div>
         </div>
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="col-sm-4">
-        <%= label_tag "Condições climáticas" %>
+        <%= label_tag "Condições climáticas", nil, class: 'required' %>
         <%= f.text_area :climate_conditions, :required => true, placeholder: "Nublado com muito vento", class: "form-control form-control-sm" %>
       </div>
       <div class="col-sm-2"></div>

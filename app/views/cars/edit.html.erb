@@ -22,15 +22,15 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
       <div class="form-group">
-        <%= label_tag "Marca da viatura" %>
+        <%= label_tag "Marca da viatura", nil, class: 'required' %>
         <%= f.text_field :brand, :required => true, placeholder: "Chevrolet - Fiat...", class: "form-control form-control-sm" %>
       </div>
       <div class="form-group">
-        <%= label_tag "Nome da viatura" %>
+        <%= label_tag "Nome da viatura", nil, class: 'required' %>
         <%= f.text_field :name,:required => true, placeholder: "Uno - Celta...", class: "form-control form-control-sm" %>
       </div>
       <div class="form-group">
-        <%= label_tag "Placa" %>
+        <%= label_tag "Placa", nil, class: 'required' %>
         <%= f.text_field :board, :required => true, placeholder: "xxx1234", class: "form-control form-control-sm" %>
       </div>
     </div>
@@ -40,7 +40,7 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-3">
       <div class="form-group">
-        <%= label_tag "Ano da viatura" %>
+        <%= label_tag "Ano da viatura", nil, class: 'required' %>
         <%= f.number_field :year, :required => true, placeholder: "1990", class: "form-control form-control-sm" %>
       </div>
       <%= f.submit "Atualizar", class: "btn btn-default" %>
@@ -48,13 +48,13 @@
     </div>
     <div class="col-sm-3">
       <div class="form-group">
-        <%= label_tag "Quilometragem" %>
+        <%= label_tag "Quilometragem", nil, class: 'required' %>
         <%= f.number_field :mileage, :required => true, placeholder: "150000", class: "form-control form-control-sm" %>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="form-group">
-        <%= label_tag "Número" %>
+        <%= label_tag "Número", nil, class: 'required' %>
         <%= f.number_field :number, :required => true, placeholder: "05", class: "form-control form-control-sm" %>
       </div>
     </div>

@@ -22,25 +22,25 @@
     <div class="col-sm-2"></div>
       <div class="col-sm-2">
         <div class="form-group">
-          <%= label_tag "Data de saída" %>
+          <%= label_tag "Data de saída", nil, class: 'required' %>
           <%= f.date_field :date_out, :required => true,  class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-2">
         <div class="form-group">
-          <%= label_tag "Hora da saída" %>
+          <%= label_tag "Hora da saída", nil, class: 'required' %>
           <%= f.time_field :exit_time, :required => true,  class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-2">
         <div class="form-group">
-          <%= label_tag "Data de retorno" %>
+          <%= label_tag "Data de retorno", nil, class: 'required' %>
           <%= f.date_field :return_date, :required => true,  class: "form-control form-control-sm" %>
         </div>
       </div>
       <div class="col-sm-2">
         <div class="form-group">
-          <%= label_tag "Hora do retorno" %>
+          <%= label_tag "Hora do retorno", nil, class: 'required' %>
           <%= f.time_field :return_time, :required => true, class: "form-control form-control-sm" %>
         </div>
       </div>
@@ -51,7 +51,7 @@
     <div class="col-sm-2"></div>
       <div class="col-sm-8">
         <div class="form-group">
-          <%= label_tag "Justificativa" %>
+          <%= label_tag "Justificativa", nil, class: 'required' %>
           <%= f.text_area :justification,:required => true, placeholder: "Busca de documentos...", class: "form-control form-control-sm" %>
         </div>
       </div>

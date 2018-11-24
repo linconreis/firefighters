@@ -23,7 +23,7 @@
 		<div class="col-sm-2"></div>	
 			<div class="col-sm-8">
 				<div class="form-group">
-					<%= label_tag "Nome do bairro" %>
+					<%= label_tag "Nome do bairro", nil, class: 'required' %>
 					<%= f.text_field :name, :required => true, placeholder: "Centro", class: "form-control form-control-sm" %>
 				</div>
 

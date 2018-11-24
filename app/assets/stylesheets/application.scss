@@ -67,3 +67,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #f5e205;
     font-weight: bold;
 }
+
+
+.required::before { // asteriscos em campos obrigatórios
+    content: "*";
+    color: #ff0000;
+    margin-right: 5px;
+}

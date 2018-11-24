@@ -24,19 +24,19 @@
 		<div class="col-sm-2"></div>
 		<div class="col-sm-2">
 			<div class="form-group">
-				<%= label_tag "Data do Evento" %>
+				<%= label_tag "Data do Evento", nil, class: 'required' %>
 				<%= f.date_field :date, :required => true, class: "form-control form-control-sm" %>
 			</div>
 		</div>
 		<div class="col-sm-3">
 			<div class="form-group">
-				<%= label_tag "Chuva nas últimas 24 horas" %>
+				<%= label_tag "Chuva nas últimas 24 horas", nil, class: 'required' %>
 				<%= f.number_field :last_twenty_four, :required => true, placeholder: "000", class: "form-control form-control-sm" %>
 			</div>
 		</div>
 		<div class="col-sm-3">
 			<div class="form-group">
-				<%= label_tag "Chuva de nas últimas 48 horas" %>
+				<%= label_tag "Chuva de nas últimas 48 horas", nil, class: 'required' %>
 				<%= f.number_field :last_forty_eight, :required => true, placeholder: "000", class: "form-control form-control-sm" %>
 			</div>
 		</div>

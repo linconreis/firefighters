@@ -23,13 +23,13 @@
 		<div class="col-sm-2"></div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<%= label_tag "Nome" %>
+					<%= label_tag "Nome", nil, class: 'required' %>
 					<%= f.text_field :name, :required => true, placeholder: "Nome", class: "form-control form-control-sm" %>
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<%= label_tag "Sobrenome" %>
+					<%= label_tag "Sobrenome", nil, class: 'required' %>
 					<%= f.text_field :last_name, :required => true, placeholder: "Sobrenome", class: "form-control form-control-sm" %>
 				</div>
 			</div>
@@ -39,13 +39,13 @@
 		<div class="col-sm-2"></div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<%= label_tag "Telefone" %>
+					<%= label_tag "Telefone", nil, class: 'required' %>
 					<%= f.text_field :phone, :required => true, placeholder: "54988776655", class: "mask-phone form-control form-control-sm" %>
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="form-group">
-					<%= label_tag "E-mail" %>
+					<%= label_tag "E-mail", nil, class: 'required' %>
 					<%= f.email_field :email, :required => true, placeholder: "nome@provedor.com.br", class: "form-control form-control-sm" %>
 				</div>
 			</div>
@@ -55,19 +55,19 @@
 		<div class="col-sm-2"></div>
 			<div class="col-sm-3">
 				<div class="form-group">
-					<%= label_tag "Código de Matricula" %>
+					<%= label_tag "Código de Matricula", nil, class: 'required' %>
 					<%= f.text_field :registration, :required => true, placeholder: "11223344", class: "form-control form-control-sm" %>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="form-group">
-					<%= label_tag "Data de Nascimento" %>
+					<%= label_tag "Data de Nascimento", nil, class: 'required' %>
 					<%= f.date_field :birth_date, :required => true, class: " form-control form-control-sm" %>
 				</div>
 			</div>
 			<div class="col-sm-2">
 				<div class="form-group">
-         <%= label_tag "Tipo Sanguíneo" %>
+         <%= label_tag "Tipo Sanguíneo", nil, class: 'required' %>
          <%= f.select :type_blood, [['A+'], ['A-'], ['B+'], ['B-'], ['AB+'], ['AB+'], ['AB-'], ['O+'],['O-']], {:include_blank => 'Tipo sanguíneo'}, { :multiple => false, :required => true, :class => "form-control form-control-sm" } %>
         </div>
 			</div>

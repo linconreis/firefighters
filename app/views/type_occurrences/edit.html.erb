@@ -22,11 +22,11 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
       <div class="form-group">
-        <%= label_tag "Nome / Tipo de ocorrência" %>
+        <%= label_tag "Nome / Tipo de ocorrência", nil, class: 'required' %>
         <%= f.text_field :name, :required => true, placeholder: "Incêndio - Salvamento em altura..", class: "form-control form-control-sm" %>
       </div>
       <div class="form-group">
-        <%= label_tag "Código da ocorrência" %>
+        <%= label_tag "Código da ocorrência", nil, class: 'required' %>
         <%= f.number_field :code, :required => true, placeholder: "13", class: "form-control form-control-sm" %>
       </div>
       <%= f.submit "Atualizar", class: "btn btn-default"  %>
