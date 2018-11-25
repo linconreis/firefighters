@@ -18,6 +18,33 @@
   <hr><br>
 
   <div class="row">
+    <div class="card-body">
+      <h4 class="text-center">Digite o endereço da ocorrência</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+      <div class="col-sm-6">
+        <div class="form-group">
+        <%= collection_select(:event_log, :address, Address.order(:name).all, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false,  :required => true, :class => "form-control form-control-sm"   }) %>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="form-group">
+          <%= f.number_field :number, :required => true, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
+        </div>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+      <div class="card-body">
+        <h4 class="text-center">Atualize os dados da ocorrência</h4>
+      </div>
+    </div>
+
+  <div class="row">
     <div class="col-sm-2"></div>
       <div class="col-sm-2">
         <div class="form-group">
@@ -93,28 +120,6 @@
       </div>
       <div class="col-sm-2"></div>
     </div>
-
-    <div class="row">
-      <div class="card-body">
-        <h4 class="text-center">Digite o endereço da ocorrência</h4>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-2"></div>
-        <div class="col-sm-6">
-          <div class="form-group">
-          <%= collection_select(:event_log, :address, Address.order(:name).all, :id, :name_with_district_name, {:selected => @event_log.address.id, :include_blank => 'Selecione o endereço'}, { :multiple => false,  :required => true, :class => "form-control form-control-sm"   }) %>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="form-group">
-            <%= f.number_field :number, :required => true, placeholder: "Altura/Número", class: "form-control form-control-sm" %>
-          </div>
-        </div>
-      <div class="col-sm-2"></div>
-    </div>
-
 
     <div class="row">
       <div class="card-body">
