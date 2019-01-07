@@ -16,10 +16,18 @@ class AbsencesController < ApplicationController
     firefighters = Firefighter.where id: params[:firefighters]
     cars = Car.where id: params[:cars]
     @absence = Absence.new(absence_params)
-
     @absence.firefighters = firefighters
     @absence.cars = cars
 		
+
+    if @absence.mileage_return <= @absence.mileage_output
+      @firefighters = Firefighter.order(:name).all
+      @cars = Car.order(:name).all
+      flash[:danger] = "Km de retorno menor que Km de saída"
+      render :new
+      return
+    end
+
     if @absence.save
       redirect_to controller: "absences"
       flash[:success] = "Cadastrado com sucesso"
@@ -46,6 +54,14 @@ class AbsencesController < ApplicationController
 
     @absence.firefighters = @firefighters if @firefighters.present?
     @absence.cars = @cars if @cars.present?
+
+    if params[:absence][:mileage_return] <= params[:absence][:mileage_output]
+      @firefighters = Firefighter.order(:name).all
+      @cars = Car.order(:name).all
+      flash[:danger] = "Km de retorno menor que KM de saída"
+      render :edit
+      return
+    end
     
     if @absence.update(absence_params)
       redirect_to controller: "absences"
@@ -71,7 +87,7 @@ class AbsencesController < ApplicationController
   private
 
     def absence_params
-      params.require(:absence).permit(:justification, :exit_time, :return_time, :date_out, :return_date )
+      params.require(:absence).permit(:justification, :exit_time, :return_time, :date_out, :return_date, :mileage_output, :mileage_return )
     end
 
 end

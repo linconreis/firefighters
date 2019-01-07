@@ -17,6 +17,9 @@
             <td>&nbsp&nbsp&nbsp</td>
             <td><strong>Horário da saída</strong></td>
             <td><%= format_time(@absence.exit_time) %></td>
+            <td>&nbsp&nbsp&nbsp</td>
+            <td><strong>Km de saída</strong></td></td>
+            <td><%= @absence.mileage_output %></td>
           </tr>
           <tr>
             <td><strong>Data do retorno</strong></td>
@@ -24,6 +27,9 @@
             <td>&nbsp&nbsp&nbsp</td>
             <td><strong>Horário do retorno</strong></td>
             <td><%= format_time(@absence.return_time) %></td>
+            <td>&nbsp&nbsp&nbsp</td>
+            <td><strong>Km de retorno</strong></td>
+            <td><%= @absence.mileage_return %></td>
           </tr>
         </thead>
       </table>

@@ -49,6 +49,19 @@
 
   <div class="row">
     <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <%= label_tag "Km de saída", nil, class: 'required' %>
+        <%= f.number_field :mileage_output, :required => true, class: "form-control form-control-sm" %>
+      </div>
+      <div class="col-sm-4">
+        <%= label_tag "Km de retorno", nil, class: 'required' %>
+        <%= f.number_field :mileage_return, :required => true, class: "form-control form-control-sm" %>
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
       <div class="col-sm-8">
         <div class="form-group">
           <%= label_tag "Justificativa", nil, class: 'required' %>
@@ -116,3 +129,5 @@
     <div class="col-sm-2"></div>
   </div>
 <% end %>
+<br>
+<br>
